@@ -1,0 +1,171 @@
+import React, { useState } from 'react';
+import {
+  Bars3Icon,
+  XMarkIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from '@heroicons/react/24/outline';
+
+const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLocationClick = () => {
+    // Replace with your actual Google Maps location
+    window.open('https://www.google.com/maps/search/?api=1&query=Your+Location', '_blank');
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+1234567890'; // Replace with your actual phone number
+  };
+
+  return (
+    <nav className="sticky top-0 z-50 backdrop-blur-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center" style={{ height: '48px' }}>
+          {/* Logo and Name */}
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/logo-final.JPG" 
+              alt="AquaTrek Logo" 
+              className="rounded-full object-cover"
+              style={{ width: '32px', height: '32px' }}
+            />
+            <span className="font-bold text-gray-800" style={{ fontSize: '18px' }}>AquaTrek</span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {/* Navigation Links */}
+            <div className="flex items-center space-x-6 px-6">
+              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+                About Us
+              </a>
+              <a href="#team" className="text-gray-700 hover:text-blue-600 transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+                Our Team
+              </a>
+              <a href="#blog" className="text-gray-700 hover:text-blue-600 transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+                Blog
+              </a>
+            </div>
+
+            {/* Vertical Divider */}
+            <div className="bg-gray-300" style={{ height: '24px', width: '1px' }}></div>
+
+            {/* Location */}
+            <button
+              onClick={handleLocationClick}
+              className="flex items-center space-x-2 px-4 text-gray-700 hover:text-blue-600 transition-colors"
+              style={{ fontSize: '12px', fontWeight: 600 }}
+            >
+              <MapPinIcon style={{ width: '16px', height: '16px' }} />
+              <span>Our Location</span>
+            </button>
+
+            {/* Vertical Divider */}
+            <div className="bg-gray-300" style={{ height: '24px', width: '1px' }}></div>
+
+            {/* Phone */}
+            <button
+              onClick={handlePhoneClick}
+              className="flex flex-col items-center px-4 text-gray-700 hover:text-blue-600 transition-colors"
+              style={{ fontSize: '12px', fontWeight: 600 }}
+            >
+              <div className="flex items-center space-x-2">
+                <PhoneIcon style={{ width: '16px', height: '16px' }} />
+                <span>+123 456 7890</span>
+              </div>
+              <span className="text-gray-500" style={{ fontSize: '10px', marginTop: '2px', fontWeight: 600 }}>Call Us</span>
+            </button>
+
+            {/* Vertical Divider */}
+            <div className="bg-gray-300" style={{ height: '24px', width: '1px' }}></div>
+
+            {/* Contact Us Button */}
+            <button className="px-4 text-gray-700 border border-gray-700 rounded-lg hover:bg-gray-100 transition-colors uppercase" style={{ fontSize: '12px', padding: '6px 20px', fontWeight: 600 }}>
+              Contact Us
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button onClick={toggleMenu} className="md:hidden text-gray-700 hover:text-blue-600 p-2">
+            {isMenuOpen ? (
+              <XMarkIcon style={{ width: '24px', height: '24px' }} />
+            ) : (
+              <Bars3Icon style={{ width: '24px', height: '24px' }} />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-4 pt-2 pb-4 space-y-3">
+            {/* Navigation Links */}
+            <a
+              href="#about"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors uppercase"
+              style={{ fontSize: '13px', fontWeight: 600 }}
+            >
+              About Us
+            </a>
+            <a
+              href="#team"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors uppercase"
+              style={{ fontSize: '13px', fontWeight: 600 }}
+            >
+              Our Team
+            </a>
+            <a
+              href="#blog"
+              className="block py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors uppercase"
+              style={{ fontSize: '13px', fontWeight: 600 }}
+            >
+              Blog
+            </a>
+
+            {/* Divider */}
+            <div className="border-t border-gray-200 my-2"></div>
+
+            {/* Location */}
+            <button
+              onClick={handleLocationClick}
+              className="flex items-center space-x-2 w-full py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors"
+              style={{ fontSize: '12px', fontWeight: 600 }}
+            >
+              <MapPinIcon style={{ width: '16px', height: '16px' }} />
+              <span>Our Location</span>
+            </button>
+
+            {/* Phone */}
+            <button
+              onClick={handlePhoneClick}
+              className="flex flex-col items-start w-full py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded transition-colors"
+              style={{ fontSize: '12px', fontWeight: 600 }}
+            >
+              <div className="flex items-center space-x-2">
+                <PhoneIcon style={{ width: '16px', height: '16px' }} />
+                <span>+123 456 7890</span>
+              </div>
+              <span className="text-gray-500" style={{ fontSize: '10px', marginLeft: '24px', fontWeight: 600 }}>Call Us</span>
+            </button>
+
+            {/* Divider */}
+            <div className="border-t border-gray-200 my-2"></div>
+
+            {/* Contact Us Button */}
+            <button className="w-full text-gray-700 border border-gray-700 rounded-lg hover:bg-gray-100 transition-colors uppercase" style={{ fontSize: '12px', padding: '8px 24px', fontWeight: 600 }}>
+              Contact Us
+            </button>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
