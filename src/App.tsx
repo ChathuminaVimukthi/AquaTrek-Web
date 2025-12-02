@@ -3,6 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import Blog from './pages/Blog';
+import BlogArticle from './pages/BlogArticle';
+import TourDetails from './pages/TourDetails';
+import CelebrationPackage from './pages/CelebrationPackage';
 import './App.css';
 
 function App() {
@@ -14,6 +19,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
+          <Route path="/tour/:tourId" element={<TourDetails />} />
+          <Route path="/celebration" element={<CelebrationPackage />} />
         </Routes>
       </div>
     </Router>

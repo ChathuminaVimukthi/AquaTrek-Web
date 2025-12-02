@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Bars3Icon,
   XMarkIcon,
@@ -15,11 +16,11 @@ const Navbar: React.FC = () => {
 
   const handleLocationClick = () => {
     // Replace with your actual Google Maps location
-    window.open('https://www.google.com/maps/search/?api=1&query=Your+Location', '_blank');
+    window.open('https://maps.app.goo.gl/jSaYGaPdi1sckKdBA', '_blank');
   };
 
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+1234567890'; // Replace with your actual phone number
+    window.location.href = 'tel:+94773366171'; // Replace with your actual phone number
   };
 
   return (
@@ -27,7 +28,7 @@ const Navbar: React.FC = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center" style={{ height: '48px' }}>
           {/* Logo and Name */}
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 cursor-pointer">
             <img 
               src="/logo-final.JPG" 
               alt="AquaTrek Logo" 
@@ -35,21 +36,21 @@ const Navbar: React.FC = () => {
               style={{ width: '32px', height: '32px' }}
             />
             <span className="font-bold text-brand-navy" style={{ fontSize: '18px' }}>AquaTrek</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6 px-6">
-              <a href="#about" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+              <Link to="/about" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 About Us
-              </a>
+              </Link>
               <a href="#team" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 Our Team
               </a>
-              <a href="#blog" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+              <Link to="/blog" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 Blog
-              </a>
+              </Link>
             </div>
 
             {/* Vertical Divider */}
@@ -76,7 +77,7 @@ const Navbar: React.FC = () => {
             >
               <div className="flex items-center space-x-2">
                 <PhoneIcon style={{ width: '16px', height: '16px' }} />
-                <span>+123 456 7890</span>
+                <span>+94 77 336 6171</span>
               </div>
               <span className="text-gray-500" style={{ fontSize: '10px', marginTop: '2px', fontWeight: 600 }}>Call Us</span>
             </button>
@@ -85,9 +86,9 @@ const Navbar: React.FC = () => {
             <div className="bg-gray-300" style={{ height: '24px', width: '1px' }}></div>
 
             {/* Contact Us Button */}
-            <button className="px-4 text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '6px 20px', fontWeight: 600 }}>
+            <Link to="/contact" className="px-4 text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '6px 20px', fontWeight: 600 }}>
               Contact Us
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,13 +107,13 @@ const Navbar: React.FC = () => {
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 pt-2 pb-4 space-y-3">
             {/* Navigation Links */}
-            <a
-              href="#about"
+            <Link
+              to="/about"
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
               About Us
-            </a>
+            </Link>
             <a
               href="#team"
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
@@ -120,13 +121,13 @@ const Navbar: React.FC = () => {
             >
               Our Team
             </a>
-            <a
-              href="#blog"
+            <Link
+              to="/blog"
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
               Blog
-            </a>
+            </Link>
 
             {/* Divider */}
             <div className="border-t border-gray-200 my-2"></div>
@@ -158,9 +159,9 @@ const Navbar: React.FC = () => {
             <div className="border-t border-gray-200 my-2"></div>
 
             {/* Contact Us Button */}
-            <button className="w-full text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '8px 24px', fontWeight: 600 }}>
+            <Link to="/contact" className="block w-full text-center text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '8px 24px', fontWeight: 600 }}>
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       )}

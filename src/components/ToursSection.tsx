@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ToursSection: React.FC = () => {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
@@ -6,16 +7,18 @@ const ToursSection: React.FC = () => {
 
   const tours = [
     {
+      id: 'sunset-banyan-tree',
       image: '/carousel1.jpg',
       title: 'Sunset & Banyan Tree Tour',
       description: 'Late afternoon adventure to a majestic Banyan tree. Ends at Dodanduwa fishing harbour with a stunning ocean sunset.',
       badge: 'Route A',
-      badgeColor: 'bg-primary',
+      badgeColor: 'bg-secondary',
       distance: '4.5 km',
-      buttonColor: 'bg-primary hover:bg-primary-hover',
+      buttonColor: 'bg-secondary hover:bg-secondary-hover',
       textColor: 'text-primary'
     },
     {
+      id: 'sunrise-wildlife',
       image: '/carousel2.jpg',
       title: 'Sunrise & Wildlife Tour',
       description: 'Early morning serenity on calm waters. Explore mangrove canals, spot local wildlife, and watch traditional fishermen at work.',
@@ -26,14 +29,16 @@ const ToursSection: React.FC = () => {
       textColor: 'text-secondary'
     },
     {
+      id: 'celebration-package',
       image: '/carousel3.jpg',
       title: 'Celebrate by the Water',
       description: 'Create unforgettable memories with our special celebration packages. Perfect for birthdays, anniversaries, or any special occasion.',
       badge: 'Special',
-      badgeColor: 'bg-accent-offer',
-      distance: 'Custom',
-      buttonColor: 'bg-accent-offer hover:bg-accent-gold',
-      textColor: 'text-accent-offer'
+      badgeColor: 'bg-secondary',
+      distance: '',
+      buttonColor: 'bg-secondary hover:bg-secondary-hover',
+      textColor: 'text-accent-offer',
+      route: '/celebration'
     }
   ];
 
@@ -145,9 +150,9 @@ const ToursSection: React.FC = () => {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className={`${tour.textColor} font-bold text-lg`}>{tour.distance}</span>
-                    <button className={`${tour.buttonColor} text-white px-6 py-2 font-semibold transition-colors duration-300`}>
+                    <Link to={tour.route || `/tour/${tour.id}`} className={`${tour.buttonColor} text-white px-6 py-2 font-semibold transition-colors duration-300`}>
                       Learn More
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -186,9 +191,9 @@ const ToursSection: React.FC = () => {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className={`${tour.textColor} font-bold text-lg`}>{tour.distance}</span>
-                  <button className={`${tour.buttonColor} text-white px-6 py-2 font-semibold transition-colors duration-300`}>
+                  <Link to={tour.route || `/tour/${tour.id}`} className={`${tour.buttonColor} text-white px-6 py-2 font-semibold transition-colors duration-300`}>
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -224,7 +229,7 @@ const ToursSection: React.FC = () => {
             onClick={() => handleDotClick(index)}
             className={`transition-all duration-300 rounded-full ${
               getActiveDotIndex() === index 
-                ? 'w-8 h-3 bg-primary' 
+                ? 'w-8 h-3 bg-secondary' 
                 : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to tour ${index + 1}`}

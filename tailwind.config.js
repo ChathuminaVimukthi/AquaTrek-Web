@@ -17,8 +17,8 @@ module.exports = {
           hover: "#7FA27B",     // Soft green hover
         },
         brand: {
-          deep: "#072D48",      // Standard text
-          navy: "#0C3C63",      // headings / readable base
+          deep: "#0C3C63",      // Standard text
+          navy: "#072D48",      // headings / readable base
         },
         nature: {
           bg: "#7DBFA7",        // Nature information sections
