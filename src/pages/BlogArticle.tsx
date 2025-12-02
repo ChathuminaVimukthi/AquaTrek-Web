@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -206,6 +207,32 @@ const BlogArticle: React.FC = () => {
 
   const post = slug ? blogPosts[slug] : null;
 
+  // Generate structured data for article
+  const getArticleStructuredData = () => {
+    if (!post) return {};
+    
+    return {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "image": `https://aquatrekhikkaduwa.com${post.image}`,
+      "datePublished": new Date(post.date).toISOString(),
+      "author": {
+        "@type": "Organization",
+        "name": "AquaTrek Hikkaduwa"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AquaTrek Hikkaduwa",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://aquatrekhikkaduwa.com/logo.png"
+        }
+      },
+      "keywords": post.tags.join(", ")
+    };
+  };
+
   if (!post) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -230,6 +257,20 @@ const BlogArticle: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-primary-bg">
+      <SEO
+        title={post.title}
+        description={post.content.replace(/<[^>]*>/g, '').substring(0, 160) + '...'}
+        keywords={post.tags.join(', ') + ', Rathgama Lake, Hikkaduwa, kayaking blog'}
+        canonical={`https://aquatrekhikkaduwa.com/blog/${slug}`}
+        ogType="article"
+        ogImage={`https://aquatrekhikkaduwa.com${post.image}`}
+        article={{
+          publishedTime: new Date(post.date).toISOString(),
+          tags: post.tags,
+          author: "AquaTrek Hikkaduwa"
+        }}
+        structuredData={getArticleStructuredData()}
+      />
       {/* Hero Image Section with Title Overlay at Bottom */}
       <div className="w-full h-screen relative">
         <img 

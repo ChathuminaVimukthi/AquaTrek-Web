@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 
 const ContactUs: React.FC = () => {
@@ -32,7 +33,13 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary-bg">
+    <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Contact Us - Book Your Kayaking Adventure"
+        description="Get in touch with AquaTrek Hikkaduwa to book your kayaking tour in Rathgama Lake. Contact us for reservations, inquiries, and custom tour packages. Located in Hikkaduwa, Sri Lanka."
+        keywords="contact AquaTrek, book kayaking tour, Hikkaduwa contact, tour reservations, Rathgama Lake booking"
+        canonical="https://aquatrekhikkaduwa.com/contact"
+      />
       {/* Google Maps Section - Full Width */}
       <div className="w-full h-[450px]">
         <iframe 

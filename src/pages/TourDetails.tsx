@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -176,6 +177,79 @@ const TourDetails: React.FC = () => {
 
   const tour = tourId ? tours[tourId] : null;
 
+  // SEO data based on tour
+  const getTourSEO = () => {
+    if (tourId === 'sunset-banyan-tree' && tour) {
+      return {
+        title: 'Sunset & Banyan Tree Kayaking Tour',
+        description: 'Experience a magical sunset kayaking tour in Rathgama Lake. Explore a majestic Banyan tree, paddle through mangrove channels, and watch the golden sunset at Dodanduwa beach. 2-3 hours, all ages welcome.',
+        keywords: 'sunset kayaking tour, Banyan tree tour, mangrove kayaking, Dodanduwa beach sunset, evening kayaking Hikkaduwa, nature adventure Sri Lanka',
+        structuredData: {
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          "name": "Sunset & Banyan Tree Kayaking Tour",
+          "description": tour.mainDescription,
+          "image": `https://aquatrekhikkaduwa.com${tour.heroImage}`,
+          "touristType": "All Ages",
+          "availableLanguage": ["en"],
+          "isAccessibleForFree": false,
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceRange": "Contact for pricing"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "Rathgama Lake",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hikkaduwa",
+              "addressCountry": "LK"
+            }
+          }
+        }
+      };
+    } else if (tourId === 'sunrise-wildlife' && tour) {
+      return {
+        title: 'Sunrise & Wildlife Kayaking Tour',
+        description: 'Begin your day with a magical sunrise kayaking tour in Rathgama Lake. Watch birds take flight, explore mangroves, and witness the dawn awaken the lake. Perfect for nature lovers and photographers.',
+        keywords: 'sunrise kayaking, wildlife tour, birdwatching kayaking, dawn kayaking Hikkaduwa, nature photography, early morning tour Sri Lanka',
+        structuredData: {
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          "name": "Sunrise & Wildlife Kayaking Tour",
+          "description": tour.mainDescription,
+          "image": `https://aquatrekhikkaduwa.com${tour.heroImage}`,
+          "touristType": "All Ages",
+          "availableLanguage": ["en"],
+          "isAccessibleForFree": false,
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceRange": "Contact for pricing"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "Rathgama Lake",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hikkaduwa",
+              "addressCountry": "LK"
+            }
+          }
+        }
+      };
+    }
+    return {
+      title: 'Kayaking Tours',
+      description: 'Explore Rathgama Lake with AquaTrek Hikkaduwa kayaking tours.',
+      keywords: 'kayaking tours, Rathgama Lake, Hikkaduwa',
+      structuredData: {}
+    };
+  };
+
+  const seoData = getTourSEO();
+
   if (!tour) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -200,6 +274,14 @@ const TourDetails: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonical={`https://aquatrekhikkaduwa.com/tour/${tourId}`}
+        structuredData={seoData.structuredData}
+        ogImage={tour ? `https://aquatrekhikkaduwa.com${tour.heroImage}` : undefined}
+      />
       {/* Hero Section */}
       <div className="w-full h-screen relative">
         <img 

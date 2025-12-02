@@ -1,9 +1,71 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Footer: React.FC = () => {
+  // LocalBusiness structured data for SEO
+  const localBusinessData = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttractionBusiness",
+    "name": "AquaTrek Hikkaduwa",
+    "image": "https://aquatrekhikkaduwa.com/logo192.png",
+    "description": "Discover the beauty of Rathgama Lake with guided kayak and canoe tours through serene waters, spotting wildlife and soaking in stunning views. Family-run eco-tourism business offering sunrise and sunset kayaking adventures in Hikkaduwa, Sri Lanka.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rathgama Lake",
+      "addressLocality": "Hikkaduwa",
+      "addressRegion": "Southern Province",
+      "addressCountry": "LK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "6.1386",
+      "longitude": "80.1060"
+    },
+    "url": "https://aquatrekhikkaduwa.com",
+    "telephone": "+94 77 123 4567",
+    "email": "info@aquatrekhikkaduwa.com",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 06:00-18:00",
+    "sameAs": [
+      "https://www.facebook.com/aquatrekhikkaduwa",
+      "https://www.instagram.com/aquatrekhikkaduwa"
+    ],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Hikkaduwa, Sri Lanka"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Kayaking Tours",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sunset & Banyan Tree Kayaking Tour",
+            "description": "Evening kayaking tour featuring Banyan tree exploration and sunset viewing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sunrise & Wildlife Kayaking Tour",
+            "description": "Early morning kayaking tour for wildlife and bird watching"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <footer className="bg-[#1a1f2e] text-white">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessData)}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 text-left">
           {/* Logo and Description */}

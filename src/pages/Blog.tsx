@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -85,6 +86,12 @@ const Blog: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Blog - Nature, Wildlife & Kayaking Stories"
+        description="Read our blog about kayaking adventures, wildlife encounters, birdwatching tips, and the natural beauty of Rathgama Lake in Hikkaduwa, Sri Lanka. Learn about mangroves, local culture, and eco-tourism."
+        keywords="kayaking blog, Rathgama Lake wildlife, Sri Lanka nature blog, birdwatching guides, mangrove ecosystem, eco tourism stories"
+        canonical="https://aquatrekhikkaduwa.com/blog"
+      />
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
         <img 

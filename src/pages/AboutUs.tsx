@@ -1,10 +1,17 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const AboutUs: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Us - Family-Run Kayaking Tours"
+        description="Learn about AquaTrek Hikkaduwa, a family-owned kayaking tour business in Rathgama Lake, Sri Lanka. Discover our story, passion for nature, and commitment to providing authentic eco-tourism experiences."
+        keywords="about AquaTrek, family kayaking business, Hikkaduwa tours, eco tourism Sri Lanka, local tour guides, Rathgama Lake"
+        canonical="https://aquatrekhikkaduwa.com/about"
+      />
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
         <img 

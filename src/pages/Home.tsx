@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';
 import ToursSection from '../components/ToursSection';
@@ -20,6 +21,12 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SEO
+        title="Kayaking Tours in Rathgama Lake"
+        description="Experience unforgettable kayaking adventures in Rathgama Lake, Hikkaduwa, Sri Lanka. Family-run tours featuring sunrise wildlife viewing, sunset tours, and nature exploration. Book your kayaking experience today!"
+        keywords="kayaking Hikkaduwa, Rathgama Lake tours, Sri Lanka kayaking, water sports Hikkaduwa, sunrise kayaking, sunset tours, wildlife tours, eco tourism Sri Lanka, family kayaking tours"
+        canonical="https://aquatrekhikkaduwa.com/"
+      />
       <HeroSection />
       
       <FeaturesSection />

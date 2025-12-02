@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -42,6 +43,12 @@ const CelebrationPackage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Celebration Packages - Special Events by the Water"
+        description="Celebrate your special occasions with AquaTrek's waterside celebration packages in Rathgama Lake, Hikkaduwa. Perfect for birthdays, anniversaries, and group events with customized experiences."
+        keywords="celebration packages Hikkaduwa, birthday party waterside, anniversary celebration, group events Sri Lanka, lakeside parties, special occasion packages"
+        canonical="https://aquatrekhikkaduwa.com/celebration"
+      />
       {/* Hero Section */}
       <div className="w-full h-screen relative">
         <img 

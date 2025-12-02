@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import FAQSection from '../components/FAQSection';
@@ -12,6 +13,12 @@ const AmenitiesAndTips: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Amenities & Tips for Kayaking Tours"
+        description="Everything you need to know for your kayaking adventure at Rathgama Lake. Learn about our amenities, safety equipment, what to bring, and helpful tips for an amazing tour experience."
+        keywords="kayaking tips, tour amenities, what to bring kayaking, safety equipment, Rathgama Lake guide, kayaking preparation"
+        canonical="https://aquatrekhikkaduwa.com/amenities"
+      />
       {/* Hero Section */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">
         <img 
