@@ -45,9 +45,9 @@ const Navbar: React.FC = () => {
               <Link to="/about" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 About Us
               </Link>
-              <a href="#team" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+              {/* <a href="#team" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 Our Team
-              </a>
+              </a> */}
               <Link to="/blog" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 Blog
               </Link>

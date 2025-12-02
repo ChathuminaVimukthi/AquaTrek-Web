@@ -15,7 +15,7 @@ const ToursSection: React.FC = () => {
       badgeColor: 'bg-secondary',
       distance: '4.5 km',
       buttonColor: 'bg-secondary hover:bg-secondary-hover',
-      textColor: 'text-primary'
+      textColor: 'text-secondary'
     },
     {
       id: 'sunrise-wildlife',
@@ -62,12 +62,13 @@ const ToursSection: React.FC = () => {
     setActiveIndex(newIndex);
     scrollToCard(newIndex);
     
-    // If we're going below the first set, seamlessly jump to middle set
-    if (newIndex < 3) {
+    // After animation completes, check if we need to loop
+    if (newIndex <= 2) {
       setTimeout(() => {
-        setActiveIndex(newIndex + 3);
-        scrollToCard(newIndex + 3, false);
-      }, 400);
+        const loopIndex = newIndex + 3;
+        setActiveIndex(loopIndex);
+        scrollToCard(loopIndex, false);
+      }, 300);
     }
   };
 
@@ -76,12 +77,13 @@ const ToursSection: React.FC = () => {
     setActiveIndex(newIndex);
     scrollToCard(newIndex);
     
-    // If we're going above the second set, seamlessly jump to middle set
-    if (newIndex > 5) {
+    // After animation completes, check if we need to loop
+    if (newIndex >= 6) {
       setTimeout(() => {
-        setActiveIndex(newIndex - 3);
-        scrollToCard(newIndex - 3, false);
-      }, 400);
+        const loopIndex = newIndex - 3;
+        setActiveIndex(loopIndex);
+        scrollToCard(loopIndex, false);
+      }, 300);
     }
   };
 
@@ -115,10 +117,7 @@ const ToursSection: React.FC = () => {
       <div className="relative">
         <div 
           ref={scrollContainerRef}
-          className="overflow-x-auto scrollbar-hide scroll-smooth md:block hidden"
-          style={{ 
-            WebkitOverflowScrolling: 'touch'
-          }}
+          className="overflow-hidden md:block hidden"
         >
           <div className="flex gap-6 pb-4">
             

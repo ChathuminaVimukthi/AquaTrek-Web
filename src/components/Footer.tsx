@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -20,24 +21,24 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-3" style={{ fontFamily: '"Asap", Sans-serif' }}>
               <li>
-                <a href="#home" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                <Link to="/" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#get-started" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                <Link to="/about" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                   About Us
-                </a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#services" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                   Our Team
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href="#portfolio" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                <Link to="/blog" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
