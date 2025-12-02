@@ -8,6 +8,7 @@ import Blog from './pages/Blog';
 import BlogArticle from './pages/BlogArticle';
 import TourDetails from './pages/TourDetails';
 import CelebrationPackage from './pages/CelebrationPackage';
+import AmenitiesAndTips from './pages/AmenitiesAndTips';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/tour/:tourId" element={<TourDetails />} />
           <Route path="/celebration" element={<CelebrationPackage />} />
+          <Route path="/amenities" element={<AmenitiesAndTips />} />
         </Routes>
       </div>
     </Router>

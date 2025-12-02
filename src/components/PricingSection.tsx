@@ -164,7 +164,7 @@ const PricingSection: React.FC = () => {
       <div className="max-w-4xl mx-auto mt-12 px-4">
         <div className="bg-white p-6 text-center">
           <p className="text-brand-navy  mb-2" style={{ fontFamily: '"Asap", Sans-serif'}}>
-            Need more time? <span className="text-primary">Rs 500 per extra hour</span>
+            Need more time? <span className="text-primary">Rs 1000 per extra hour</span>
           </p>
           <p className="text-brand-deep text-base mb-2" style={{ fontFamily: '"Asap", Sans-serif' }}>
             We can accommodate up to 35 people in a single session — perfect for groups and events!

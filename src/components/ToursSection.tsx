@@ -30,7 +30,7 @@ const ToursSection: React.FC = () => {
     },
     {
       id: 'celebration-package',
-      image: '/carousel3.jpg',
+      image: '/images/garden-celeb/main.jpg',
       title: 'Celebrate by the Water',
       description: 'Create unforgettable memories with our special celebration packages. Perfect for birthdays, anniversaries, or any special occasion.',
       badge: 'Special',

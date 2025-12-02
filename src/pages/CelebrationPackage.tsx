@@ -14,16 +14,16 @@ const CelebrationPackage: React.FC = () => {
   const celebration = {
     id: 'celebration-package',
     title: 'Celebrate by the Water',
-    heroImage: '/carousel3.jpg',
+    heroImage: '/images/garden-celeb/main.jpg',
     heroTitle: 'Create Unforgettable Memories',
     mainTitle: 'Special Celebration Packages',
     mainDescription: 'Make your special occasions truly memorable with our customized celebration packages. Whether it\'s a birthday, anniversary, or any milestone worth celebrating, we create the perfect waterside experience for you and your loved ones.',
     tourCards: [
-      { image: '/carousel3.jpg', title: 'Birthday Celebrations' },
-      { image: '/carousel1.jpg', title: 'Anniversary Specials' },
-      { image: '/carousel2.jpg', title: 'Group Events' }
+      { image: '/images/garden-celeb/MBD03090.jpg', title: 'Birthday Celebrations' },
+      { image: '/images/garden-celeb/PMD02696.jpg', title: 'Anniversary Specials' },
+      { image: '/images/garden-celeb/PMD02704.jpg', title: 'Group Events' }
     ],
-    tourInfoBg: '/carousel3.jpg',
+    tourInfoBg: '/images/garden-celeb/PMD02704.jpg',
     tourInfoTitle: 'Celebration Info',
     tourInfoSubtitle: 'Personalized Experiences for Your Special Day',
     tourInfoLeft: [
@@ -140,7 +140,7 @@ const CelebrationPackage: React.FC = () => {
             {/* Left Side - Kayak Image - Animate from bottom */}
             <div className="w-full md:w-1/2 flex items-center justify-center animate-[slideUp_1s_ease-out]">
               <img 
-                src="/FinalMap.png" 
+                src="/images/garden-celeb/PMD02704.jpg" 
                 alt="Celebration" 
                 className="w-full max-w-md"
               />

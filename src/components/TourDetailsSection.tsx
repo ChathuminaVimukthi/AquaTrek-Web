@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TourDetailsSection: React.FC = () => {
   return (
@@ -56,9 +57,12 @@ const TourDetailsSection: React.FC = () => {
             >
               Make the most of your time on Rathgama Lake! We've got everything set for your comfort and convenience—from clean changing facilities and shaded rest areas to refreshing drinks and easy parking—everything you need to make your adventure stress-free. Keep your eyes open for the lake's vibrant wildlife, from birds gliding above to playful fish beneath the water's surface.
             </p>
-            <button className="bg-brand-navy hover:bg-primary-hover text-white px-8 py-3 font-semibold transition-colors duration-300">
+            <Link 
+              to="/amenities"
+              className="inline-block bg-brand-navy hover:bg-primary-hover text-white px-8 py-3 font-semibold transition-colors duration-300"
+            >
               See All Amenities & Tips
-            </button>
+            </Link>
           </div>
           </div>
         </div>

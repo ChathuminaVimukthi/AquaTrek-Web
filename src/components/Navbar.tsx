@@ -109,6 +109,7 @@ const Navbar: React.FC = () => {
             {/* Navigation Links */}
             <Link
               to="/about"
+              onClick={toggleMenu}
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
@@ -116,6 +117,7 @@ const Navbar: React.FC = () => {
             </Link>
             <a
               href="#team"
+              onClick={toggleMenu}
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
@@ -123,6 +125,7 @@ const Navbar: React.FC = () => {
             </a>
             <Link
               to="/blog"
+              onClick={toggleMenu}
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
@@ -134,7 +137,7 @@ const Navbar: React.FC = () => {
 
             {/* Location */}
             <button
-              onClick={handleLocationClick}
+              onClick={() => { handleLocationClick(); toggleMenu(); }}
               className="flex items-center space-x-2 w-full py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors"
               style={{ fontSize: '12px', fontWeight: 600 }}
             >
@@ -144,7 +147,7 @@ const Navbar: React.FC = () => {
 
             {/* Phone */}
             <button
-              onClick={handlePhoneClick}
+              onClick={() => { handlePhoneClick(); toggleMenu(); }}
               className="flex flex-col items-start w-full py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors"
               style={{ fontSize: '12px', fontWeight: 600 }}
             >
@@ -159,7 +162,7 @@ const Navbar: React.FC = () => {
             <div className="border-t border-gray-200 my-2"></div>
 
             {/* Contact Us Button */}
-            <Link to="/contact" className="block w-full text-center text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '8px 24px', fontWeight: 600 }}>
+            <Link to="/contact" onClick={toggleMenu} className="block w-full text-center text-brand-navy border border-brand-navy rounded-lg hover:bg-primary hover:text-white hover:border-primary transition-colors uppercase" style={{ fontSize: '12px', padding: '8px 24px', fontWeight: 600 }}>
               Contact Us
             </Link>
           </div>
