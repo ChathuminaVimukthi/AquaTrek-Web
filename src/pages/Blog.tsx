@@ -48,7 +48,7 @@ const Blog: React.FC = () => {
       id: 4,
       title: "Traditional Fishing Communities of Rathgama",
       excerpt: "Meet the local fishing families whose lives have been intertwined with the lake for generations and discover their sustainable practices.",
-      image: "/images/others/local-fisherman.jpg",
+      image: "/images/others/local-fisherman1.jpg",
       date: "November 10, 2024",
       tags: ["Culture", "Knowledge"],
       slug: "traditional-fishing-communities-of-rathgama"
@@ -57,7 +57,7 @@ const Blog: React.FC = () => {
       id: 5,
       title: "Island Hermitage: A Spiritual Sanctuary",
       excerpt: "Journey to the historic Buddhist hermitage founded in 1911, a peaceful retreat that has attracted spiritual seekers from around the world.",
-      image: "/images/others/island-hermitage.jpg",
+      image: "/images/others/island-hermitage1.jpg",
       date: "November 5, 2024",
       tags: ["Culture", "Knowledge"],
       slug: "island-hermitage-a-spiritual-sanctuary"
