@@ -22,7 +22,7 @@ const AmenitiesAndTips: React.FC = () => {
       {/* Hero Section */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">
         <img 
-          src="/images/others/ameneties1.JPG" 
+          src="/images/others/ameneties1.jpg" 
           alt="Amenities and Tips" 
           className="w-full h-full object-cover"
         />

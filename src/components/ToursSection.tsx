@@ -8,7 +8,7 @@ const ToursSection: React.FC = () => {
   const tours = [
     {
       id: 'sunset-banyan-tree',
-      image: '/images/sunset-tour/sunset-kayaking1.JPG',
+      image: '/images/sunset-tour/sunset-kayaking1.jpg',
       title: 'Sunset & Banyan Tree Tour',
       description: 'Late afternoon adventure to a majestic Banyan tree. Ends at Dodanduwa fishing harbour with a stunning ocean sunset.',
       badge: 'Route A',
@@ -19,7 +19,7 @@ const ToursSection: React.FC = () => {
     },
     {
       id: 'sunrise-wildlife',
-      image: '/images/sunrise-tour/mangrove-kayaking5.JPEG',
+      image: '/images/sunrise-tour/mangrove-kayaking5.jpg',
       title: 'Sunrise & Wildlife Tour',
       description: 'Early morning serenity on calm waters. Explore mangrove canals, spot local wildlife, and watch traditional fishermen at work.',
       badge: 'Route B',

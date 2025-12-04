@@ -51,7 +51,7 @@ const TourDetails: React.FC = () => {
     'sunset-banyan-tree': {
       id: 'sunset-banyan-tree',
       title: 'Sunset & Banyan Tree Tour',
-      heroImage: '/images/sunset-tour/sunset-1.JPEG',
+      heroImage: '/images/sunset-tour/sunset-1.jpg',
       heroTitle: 'Sunset & Banyan Tree Adventure!',
       heroSubtitle: '',
       mainTitle: 'Sunset Over Mangroves: The Banyan Trail!',
@@ -61,7 +61,7 @@ const TourDetails: React.FC = () => {
         { image: '/images/sunset-tour/banyan-tree2.JPG', title: 'Under The Bridges' },
         { image: '/images/sunset-tour/sunset-2.jpg', title: 'Sunset & Beach' }
       ],
-      tourInfoBg: '/images/sunset-tour/sunset-kayaking1.JPG',
+      tourInfoBg: '/images/sunset-tour/sunset-kayaking1.jpg',
       tourInfoTitle: 'Tour Info',
       tourInfoSubtitle: 'Experience the Magic of Sunset on the beach',
       tourInfoLeft: [
@@ -78,7 +78,7 @@ const TourDetails: React.FC = () => {
       ],
       scheduleImages: [
         '/images/sunset-tour/sunset-cliff1.JPEG',
-        '/images/sunset-tour/sunset-1.JPEG',
+        '/images/sunset-tour/sunset-1.jpg',
         '/images/sunset-tour/sunset-2.jpg',
         '/images/sunset-tour/banyan-tree1.JPEG',
         '/images/sunset-tour/banyan-tree2.JPG',
@@ -86,7 +86,7 @@ const TourDetails: React.FC = () => {
         '/images/sunset-tour/bayan-tree4.JPEG',
         '/images/sunset-tour/banyan-tree5.JPEG',
         '/images/sunset-tour/cliff-1.JPG',
-        '/images/sunset-tour/sunset-kayaking1.JPG',
+        '/images/sunset-tour/sunset-kayaking1.jpg',
         '/images/sunset-tour/sunset-kayaking2.JPEG'
       ],
       schedule: [
@@ -130,17 +130,17 @@ const TourDetails: React.FC = () => {
     'sunrise-wildlife': {
       id: 'sunrise-wildlife',
       title: 'Sunrise & Wildlife Tour',
-      heroImage: '/images/sunrise-tour/sunrise1.JPG',
+      heroImage: '/images/sunrise-tour/sunrise1.jpg',
       heroTitle: 'Experience Nature at Dawn',
       heroSubtitle: '',
       mainTitle: 'Sunrise & Wildlife Adventure',
       mainDescription: 'Begin your day with the quiet magic of dawn on Rathgama Lake. Glide across glass-still waters as the sky softens into shades of gold and rose. Watch the mangroves awaken, birds take flight, and local fishermen begin their morning rituals — all while floating in a world that feels calm, untouched, and beautifully alive.',
       tourCards: [
-        { image: '/images/sunrise-tour/sunrise1.JPG', title: 'Early Morning Serenity' },
+        { image: '/images/sunrise-tour/sunrise1.jpg', title: 'Early Morning Serenity' },
         { image: '/images/sunrise-tour/bird2.JPG', title: 'Wildlife Spotting' },
         { image: '/images/sunrise-tour/mangrove-kayaking3.JPEG', title: 'Mangrove Exploration' }
       ],
-      tourInfoBg: '/images/sunrise-tour/mangrove-kayaking2.JPEG',
+      tourInfoBg: '/images/sunrise-tour/mangrove-kayaking2.jpg',
       tourInfoTitle: 'Tour Info',
       tourInfoSubtitle: 'Experience the Magic of Sunrise on the Lake',
       tourInfoLeft: [
@@ -156,14 +156,14 @@ const TourDetails: React.FC = () => {
         { label: 'Location', value: 'Rathgama Lake', color: 'text-white' }
       ],
       scheduleImages: [
-        '/images/sunrise-tour/sunrise1.JPG',
+        '/images/sunrise-tour/sunrise1.jpg',
         '/images/main-carousel/carousel2.jpg',
-        '/images/sunrise-tour/bird1.JPG',
+        '/images/sunrise-tour/bird1.jpg',
         '/images/sunrise-tour/bird2.JPG',
         '/images/sunrise-tour/watermonitor1.JPG',
         '/images/sunrise-tour/mangrove-kayaking3.JPEG',
         '/images/sunrise-tour/mangrove-kayaking4.JPG',
-        '/images/sunrise-tour/mangrove-kayaking5.JPEG',
+        '/images/sunrise-tour/mangrove-kayaking5.jpg',
       ],
       schedule: [
         {

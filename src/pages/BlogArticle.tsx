@@ -71,7 +71,7 @@ const BlogArticle: React.FC = () => {
 
         <p>Our guided tours are timed to maximize your chances of spotting a wide variety of species, and our local guides can identify birds by sight and sound, enriching your experience with fascinating insights into their behaviors and habitats.</p>
       `,
-      image: "/images/sunrise-tour/bird1.JPG",
+      image: "/images/sunrise-tour/bird1.jpg",
       date: "November 20, 2024",
       tags: ["Birds", "Nature"]
     },

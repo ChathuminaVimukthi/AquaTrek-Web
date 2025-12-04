@@ -15,7 +15,7 @@ const AboutUs: React.FC = () => {
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
         <img 
-          src="/images/others/aboutus.jpeg" 
+          src="/images/others/aboutus.jpg" 
           alt="Rathgama Lake" 
           className="w-full h-full object-cover"
         />

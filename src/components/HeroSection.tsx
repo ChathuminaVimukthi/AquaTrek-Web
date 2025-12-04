@@ -5,8 +5,8 @@ const HeroSection: React.FC = () => {
   
   const slides = [
     { image: '/images/main-carousel/carousel1.jpg', text: 'Explore Hidden Waters' },
-    { image: '/images/sunrise-tour/bird1.JPG', text: 'Nature At Peace' },
-    { image: '/images/sunset-tour/sunset-1.JPEG', text: 'Sunset Adventures Await' },
+    { image: '/images/sunrise-tour/bird1.jpg', text: 'Nature At Peace' },
+    { image: '/images/sunset-tour/sunset-1.jpg', text: 'Sunset Adventures Await' },
     { image: '/images/main-carousel/carousel2.jpg', text: 'Discover Wildlife Wonders' },
   ];
 

@@ -30,7 +30,7 @@ const Blog: React.FC = () => {
       id: 2,
       title: "Bird Watching Guide: Rathgama's Feathered Friends",
       excerpt: "From kingfishers to herons, discover the incredible variety of bird species that call Rathgama Lake their home throughout the seasons.",
-      image: "/images/sunrise-tour/bird1.JPG",
+      image: "/images/sunrise-tour/bird1.jpg",
       date: "November 20, 2024",
       tags: ["Birds", "Nature"],
       slug: "bird-watching-guide-rathgamas-feathered-friends"
