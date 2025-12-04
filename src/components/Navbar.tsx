@@ -115,14 +115,14 @@ const Navbar: React.FC = () => {
             >
               About Us
             </Link>
-            <a
+            {/* <a
               href="#team"
               onClick={toggleMenu}
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
               Our Team
-            </a>
+            </a> */}
             <Link
               to="/blog"
               onClick={toggleMenu}

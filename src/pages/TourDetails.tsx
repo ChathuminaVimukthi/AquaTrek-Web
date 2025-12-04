@@ -30,6 +30,7 @@ interface Tour {
     value: string;
     color: string;
   }[];
+  scheduleImages: string[];
   schedule: {
     icon: string;
     title: string;
@@ -40,6 +41,7 @@ interface Tour {
 const TourDetails: React.FC = () => {
   const { tourId } = useParams<{ tourId: string }>();
   const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = React.useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,17 +51,17 @@ const TourDetails: React.FC = () => {
     'sunset-banyan-tree': {
       id: 'sunset-banyan-tree',
       title: 'Sunset & Banyan Tree Tour',
-      heroImage: '/carousel1.jpg',
+      heroImage: '/images/sunset-tour/sunset-1.JPEG',
       heroTitle: 'Sunset & Banyan Tree Adventure!',
       heroSubtitle: '',
       mainTitle: 'Sunset Over Mangroves: The Banyan Trail!',
       mainDescription: 'Explore a majestic Banyan tree over the lake, climb and snap unforgettable photos, then paddle through mangrove channels alive with wildlife, including playful fruit bats. End your evening at Dodanduwa beach with cliff-top views and a golden sunset over the ocean — adventure, nature, and serenity in one unforgettable tour.',
       tourCards: [
-        { image: '/carousel1.jpg', title: 'White Water Kayaking' },
-        { image: '/carousel2.jpg', title: 'Basic Kayaking Training' },
-        { image: '/carousel3.jpg', title: 'Explore Boat Hose' }
+        { image: '/images/sunset-tour/banyan-tree1.JPEG', title: 'Banyan Tree' },
+        { image: '/images/sunset-tour/banyan-tree2.JPG', title: 'Under The Bridges' },
+        { image: '/images/sunset-tour/sunset-2.jpg', title: 'Sunset & Beach' }
       ],
-      tourInfoBg: '/carousel1.jpg',
+      tourInfoBg: '/images/sunset-tour/sunset-kayaking1.JPG',
       tourInfoTitle: 'Tour Info',
       tourInfoSubtitle: 'Experience the Magic of Sunset on the beach',
       tourInfoLeft: [
@@ -73,6 +75,19 @@ const TourDetails: React.FC = () => {
         { label: 'For', value: 'All Ages', color: 'text-white' },
         { label: 'Best Time', value: '3:00 PM - 6:00 PM', color: 'text-white' },
         { label: 'Location', value: 'Rathgama Lake', color: 'text-white' }
+      ],
+      scheduleImages: [
+        '/images/sunset-tour/sunset-cliff1.JPEG',
+        '/images/sunset-tour/sunset-1.JPEG',
+        '/images/sunset-tour/sunset-2.jpg',
+        '/images/sunset-tour/banyan-tree1.JPEG',
+        '/images/sunset-tour/banyan-tree2.JPG',
+        '/images/sunset-tour/banyan-tree3.jpg',
+        '/images/sunset-tour/bayan-tree4.JPEG',
+        '/images/sunset-tour/banyan-tree5.JPEG',
+        '/images/sunset-tour/cliff-1.JPG',
+        '/images/sunset-tour/sunset-kayaking1.JPG',
+        '/images/sunset-tour/sunset-kayaking2.JPEG'
       ],
       schedule: [
         {
@@ -115,17 +130,17 @@ const TourDetails: React.FC = () => {
     'sunrise-wildlife': {
       id: 'sunrise-wildlife',
       title: 'Sunrise & Wildlife Tour',
-      heroImage: '/carousel2.jpg',
+      heroImage: '/images/sunrise-tour/sunrise1.JPG',
       heroTitle: 'Experience Nature at Dawn',
       heroSubtitle: '',
       mainTitle: 'Sunrise & Wildlife Adventure',
       mainDescription: 'Begin your day with the quiet magic of dawn on Rathgama Lake. Glide across glass-still waters as the sky softens into shades of gold and rose. Watch the mangroves awaken, birds take flight, and local fishermen begin their morning rituals — all while floating in a world that feels calm, untouched, and beautifully alive.',
       tourCards: [
-        { image: '/carousel2.jpg', title: 'Early Morning Serenity' },
-        { image: '/carousel1.jpg', title: 'Wildlife Spotting' },
-        { image: '/carousel3.jpg', title: 'Mangrove Exploration' }
+        { image: '/images/sunrise-tour/sunrise1.JPG', title: 'Early Morning Serenity' },
+        { image: '/images/sunrise-tour/bird2.JPG', title: 'Wildlife Spotting' },
+        { image: '/images/sunrise-tour/mangrove-kayaking3.JPEG', title: 'Mangrove Exploration' }
       ],
-      tourInfoBg: '/carousel2.jpg',
+      tourInfoBg: '/images/sunrise-tour/mangrove-kayaking2.JPEG',
       tourInfoTitle: 'Tour Info',
       tourInfoSubtitle: 'Experience the Magic of Sunrise on the Lake',
       tourInfoLeft: [
@@ -139,6 +154,16 @@ const TourDetails: React.FC = () => {
         { label: 'For', value: 'All Ages', color: 'text-white' },
         { label: 'Best Time', value: '6:00 AM - 9:00 AM', color: 'text-white' },
         { label: 'Location', value: 'Rathgama Lake', color: 'text-white' }
+      ],
+      scheduleImages: [
+        '/images/sunrise-tour/sunrise1.JPG',
+        '/images/main-carousel/carousel2.jpg',
+        '/images/sunrise-tour/bird1.JPG',
+        '/images/sunrise-tour/bird2.JPG',
+        '/images/sunrise-tour/watermonitor1.JPG',
+        '/images/sunrise-tour/mangrove-kayaking3.JPEG',
+        '/images/sunrise-tour/mangrove-kayaking4.JPG',
+        '/images/sunrise-tour/mangrove-kayaking5.JPEG',
       ],
       schedule: [
         {
@@ -250,6 +275,16 @@ const TourDetails: React.FC = () => {
 
   const seoData = getTourSEO();
 
+  // Auto-advance carousel
+  useEffect(() => {
+    if (tour && tour.scheduleImages) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % tour.scheduleImages.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [tour]);
+
   if (!tour) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
@@ -326,7 +361,7 @@ const TourDetails: React.FC = () => {
             className="text-center text-primary mb-4"
             style={{ fontFamily: '"Asap", Sans-serif', fontSize: '14px', fontWeight: 600 }}
           >
-            Challenge The Rapids
+            Sunset & Beach Adventure
           </p>
           <h2 
             className="text-3xl md:text-7xl font-bold text-brand-navy text-center mb-8"
@@ -469,12 +504,57 @@ const TourDetails: React.FC = () => {
                 Discover the schedule
               </h2>
               
-              <div className="flex items-center justify-center w-full">
-                <img 
-                  src={tour.heroImage} 
-                  alt="Schedule" 
-                  className="w-full h-auto object-cover max-h-[600px]"
-                />
+              <div className="flex items-center justify-center w-full relative">
+                <div className="relative w-full overflow-hidden">
+                  {tour.scheduleImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`transition-opacity duration-1000 ${
+                        index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                      }`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`Schedule ${index + 1}`} 
+                        className="w-full h-auto object-cover max-h-[600px]"
+                      />
+                    </div>
+                  ))}
+                  
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={() => setCurrentSlide((prev) => (prev - 1 + tour.scheduleImages.length) % tour.scheduleImages.length)}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 transition-all z-20 bg-black/30 hover:bg-black/50 rounded-full p-2"
+                    aria-label="Previous image"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => setCurrentSlide((prev) => (prev + 1) % tour.scheduleImages.length)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 transition-all z-20 bg-black/30 hover:bg-black/50 rounded-full p-2"
+                    aria-label="Next image"
+                  >
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  
+                  {/* Dots Indicator */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {tour.scheduleImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`transition-all duration-300 rounded-full ${
+                          index === currentSlide ? 'w-8 h-3 bg-primary' : 'w-3 h-3 bg-white/50 hover:bg-white/75'
+                        }`}
+                        aria-label={`Go to image ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 

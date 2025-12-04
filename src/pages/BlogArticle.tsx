@@ -46,7 +46,7 @@ const BlogArticle: React.FC = () => {
 
         <p>Join us on a journey through Rathgama's mangrove forests and discover the hidden world that exists where freshwater meets the sea.</p>
       `,
-      image: "/carousel1.jpg",
+      image: "/images/sunrise-tour/mangrove-kayaking1.JPEG",
       date: "November 28, 2024",
       tags: ["Nature", "Knowledge"]
     },
@@ -71,7 +71,7 @@ const BlogArticle: React.FC = () => {
 
         <p>Our guided tours are timed to maximize your chances of spotting a wide variety of species, and our local guides can identify birds by sight and sound, enriching your experience with fascinating insights into their behaviors and habitats.</p>
       `,
-      image: "/carousel2.jpg",
+      image: "/images/sunrise-tour/bird1.JPG",
       date: "November 20, 2024",
       tags: ["Birds", "Nature"]
     },
@@ -99,7 +99,7 @@ const BlogArticle: React.FC = () => {
         <h2>Our Recommendation</h2>
         <p>For first-time visitors, we suggest the dry season months of January or February, with an early morning tour. You'll experience optimal weather, abundant wildlife, and the serene beauty of dawn on the lake.</p>
       `,
-      image: "/carousel3.jpg",
+      image: "/images/sunrise-tour/sunrise2.JPG",
       date: "November 15, 2024",
       tags: ["Knowledge"]
     },
@@ -127,7 +127,7 @@ const BlogArticle: React.FC = () => {
         <h2>Supporting Local Communities</h2>
         <p>We work closely with local fishing families, ensuring that tourism benefits the community while respecting their way of life. Our guides often come from these families, sharing their knowledge and providing additional income that helps sustain traditional practices.</p>
       `,
-      image: "/carousel1.jpg",
+      image: "/images/others/local-fisherman.JPG",
       date: "November 10, 2024",
       tags: ["Culture", "Knowledge"]
     },
@@ -155,7 +155,7 @@ const BlogArticle: React.FC = () => {
         <h2>A Living Tradition</h2>
         <p>The Island Hermitage continues its mission today, carrying forward the vision of its founder. It stands as a testament to the possibility of preserving spiritual traditions while coexisting harmoniously with the natural environment and local community.</p>
       `,
-      image: "/carousel2.jpg",
+      image: "/images/others/island-hermitage.JPG",
       date: "November 5, 2024",
       tags: ["Culture", "Knowledge"]
     },
@@ -188,7 +188,7 @@ const BlogArticle: React.FC = () => {
         <h2>Responsible Wildlife Watching</h2>
         <p>At Aqua Trek, we practice and promote responsible wildlife observation. We maintain respectful distances, never feed or disturb animals, and teach guests to be patient observers. The most rewarding encounters come when wildlife goes about its natural behaviors, unaffected by our presence.</p>
       `,
-      image: "/carousel3.jpg",
+      image: "/images/sunrise-tour/watermonitor1.JPG",
       date: "October 30, 2024",
       tags: ["Nature", "Wildlife"]
     }

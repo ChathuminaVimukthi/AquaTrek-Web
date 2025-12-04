@@ -8,7 +8,7 @@ const TourDetailsSection: React.FC = () => {
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2 order-1 md:order-1">
           <img 
-            src="/carousel2.jpg" 
+            src="/images/others/before-you-paddle.JPEG" 
             alt="Kayaking tour" 
             className="w-full h-40 md:h-[560px] object-cover"
           />

@@ -21,7 +21,7 @@ const Blog: React.FC = () => {
       id: 1,
       title: "Discovering the Mangrove Ecosystem",
       excerpt: "Explore the fascinating world of mangroves at Rathgama Lake and learn about their crucial role in protecting our coastline and supporting diverse wildlife.",
-      image: "/carousel1.jpg",
+      image: "/images/sunrise-tour/mangrove-kayaking1.JPEG",
       date: "November 28, 2024",
       tags: ["Nature", "Knowledge"],
       slug: "discovering-the-mangrove-ecosystem"
@@ -30,7 +30,7 @@ const Blog: React.FC = () => {
       id: 2,
       title: "Bird Watching Guide: Rathgama's Feathered Friends",
       excerpt: "From kingfishers to herons, discover the incredible variety of bird species that call Rathgama Lake their home throughout the seasons.",
-      image: "/carousel2.jpg",
+      image: "/images/sunrise-tour/bird1.JPG",
       date: "November 20, 2024",
       tags: ["Birds", "Nature"],
       slug: "bird-watching-guide-rathgamas-feathered-friends"
@@ -39,7 +39,7 @@ const Blog: React.FC = () => {
       id: 3,
       title: "The Best Time to Visit Rathgama Lake",
       excerpt: "Learn about the optimal seasons and times of day to experience the magic of Rathgama Lake, from sunrise paddles to golden hour reflections.",
-      image: "/carousel3.jpg",
+      image: "/images/sunrise-tour/sunrise2.JPG",
       date: "November 15, 2024",
       tags: ["Knowledge"],
       slug: "the-best-time-to-visit-rathgama-lake"
@@ -48,7 +48,7 @@ const Blog: React.FC = () => {
       id: 4,
       title: "Traditional Fishing Communities of Rathgama",
       excerpt: "Meet the local fishing families whose lives have been intertwined with the lake for generations and discover their sustainable practices.",
-      image: "/carousel1.jpg",
+      image: "/images/others/local-fisherman.JPG",
       date: "November 10, 2024",
       tags: ["Culture", "Knowledge"],
       slug: "traditional-fishing-communities-of-rathgama"
@@ -57,7 +57,7 @@ const Blog: React.FC = () => {
       id: 5,
       title: "Island Hermitage: A Spiritual Sanctuary",
       excerpt: "Journey to the historic Buddhist hermitage founded in 1911, a peaceful retreat that has attracted spiritual seekers from around the world.",
-      image: "/carousel2.jpg",
+      image: "/images/others/island-hermitage.JPG",
       date: "November 5, 2024",
       tags: ["Culture", "Knowledge"],
       slug: "island-hermitage-a-spiritual-sanctuary"
@@ -66,7 +66,7 @@ const Blog: React.FC = () => {
       id: 6,
       title: "Wildlife Encounters: Beyond the Birds",
       excerpt: "Discover the rich aquatic life, monitor lizards, and other fascinating creatures that inhabit the diverse ecosystem of Rathgama Lake.",
-      image: "/carousel3.jpg",
+      image: "/images/sunrise-tour/watermonitor1.JPG",
       date: "October 30, 2024",
       tags: ["Nature", "Wildlife"],
       slug: "wildlife-encounters-beyond-the-birds"
@@ -95,7 +95,7 @@ const Blog: React.FC = () => {
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
         <img 
-          src="/carousel2.jpg" 
+          src="/images/main-carousel/carousel7.jpg" 
           alt="Rathgama Lake Blog" 
           className="w-full h-full object-cover"
         />

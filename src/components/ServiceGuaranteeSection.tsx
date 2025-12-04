@@ -7,7 +7,7 @@ const ServiceGuaranteeSection: React.FC = () => {
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2 order-1 md:order-1">
           <img 
-            src="/carousel1.jpg" 
+            src="/images/main-carousel/carousel1.jpg" 
             alt="Professional service" 
             className="w-full h-64 md:h-full object-cover"
           />

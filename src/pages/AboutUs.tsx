@@ -15,7 +15,7 @@ const AboutUs: React.FC = () => {
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
         <img 
-          src="/carousel1.jpg" 
+          src="/images/others/aboutus.jpeg" 
           alt="Rathgama Lake" 
           className="w-full h-full object-cover"
         />
@@ -35,7 +35,7 @@ const AboutUs: React.FC = () => {
           {/* Left Side - Image */}
           <div className="order-2 md:order-1">
             <img 
-              src="/carousel2.jpg" 
+              src="/images/aboutus/team1.jpg" 
               alt="Family at Rathgama Lake" 
               className="w-full h-[60vh] object-cover"
             />
@@ -93,7 +93,7 @@ const AboutUs: React.FC = () => {
           {/* Right Side - Image */}
           <div>
             <img 
-              src="/carousel3.jpg" 
+              src="/images/aboutus/approach.jpg" 
               alt="Kayaking at Rathgama Lake" 
               className="w-full h-[60vh] object-cover"
             />

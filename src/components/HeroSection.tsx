@@ -4,10 +4,10 @@ const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   
   const slides = [
-    { image: '/carousel1.jpg', text: 'Explore Hidden Waters' },
-    { image: '/carousel2.jpg', text: 'Nature At Peace' },
-    { image: '/carousel3.jpg', text: 'Sunset Adventures Await' },
-    { image: '/carousel7.jpg', text: 'Discover Wildlife Wonders' },
+    { image: '/images/main-carousel/carousel1.jpg', text: 'Explore Hidden Waters' },
+    { image: '/images/sunrise-tour/bird1.JPG', text: 'Nature At Peace' },
+    { image: '/images/sunset-tour/sunset-1.JPEG', text: 'Sunset Adventures Await' },
+    { image: '/images/main-carousel/carousel2.jpg', text: 'Discover Wildlife Wonders' },
   ];
 
   React.useEffect(() => {
