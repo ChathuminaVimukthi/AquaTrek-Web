@@ -158,7 +158,7 @@ const TourDetails: React.FC = () => {
       scheduleImages: [
         '/images/sunrise-tour/sunrise1.jpg',
         '/images/main-carousel/carousel2.jpg',
-        '/images/sunrise-tour/bird1.jpg',
+        '/images/sunrise-tour/bird0.jpg',
         '/images/sunrise-tour/bird2.JPG',
         '/images/sunrise-tour/watermonitor1.JPG',
         '/images/sunrise-tour/mangrove-kayaking3.JPEG',
