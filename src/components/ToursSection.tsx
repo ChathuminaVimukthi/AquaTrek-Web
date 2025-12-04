@@ -8,7 +8,7 @@ const ToursSection: React.FC = () => {
   const tours = [
     {
       id: 'sunset-banyan-tree',
-      image: '/images/sunset-tour/sunset-kayaking1.jpg',
+      image: '/images/sunset-tour/sunset-kayaking-1.jpg',
       title: 'Sunset & Banyan Tree Tour',
       description: 'Late afternoon adventure to a majestic Banyan tree. Ends at Dodanduwa fishing harbour with a stunning ocean sunset.',
       badge: 'Route A',
