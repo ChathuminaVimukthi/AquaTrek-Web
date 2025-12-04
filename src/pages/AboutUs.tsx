@@ -2,6 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import OptimizedImage from '../components/OptimizedImage';
 
 const AboutUs: React.FC = () => {
   return (
@@ -14,10 +15,14 @@ const AboutUs: React.FC = () => {
       />
       {/* Hero Image Section - Full Width and Height */}
       <div className="w-full h-screen relative">
-        <img 
+        <OptimizedImage
           src="/images/others/aboutus.jpg" 
           alt="Rathgama Lake" 
-          className="w-full h-full object-cover"
+          className=""
+          priority={true}
+          blur={true}
+          objectFit="cover"
+          fill={true}
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
           <h1 
@@ -34,10 +39,13 @@ const AboutUs: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {/* Left Side - Image */}
           <div className="order-2 md:order-1">
-            <img 
+            <OptimizedImage
               src="/images/aboutus/team1.jpg" 
               alt="Family at Rathgama Lake" 
-              className="w-full h-[60vh] object-cover"
+              className="h-[60vh]"
+              priority={false}
+              blur={true}
+              objectFit="cover"
             />
           </div>
 
@@ -92,10 +100,13 @@ const AboutUs: React.FC = () => {
 
           {/* Right Side - Image */}
           <div>
-            <img 
+            <OptimizedImage
               src="/images/aboutus/approach.jpg" 
               alt="Kayaking at Rathgama Lake" 
-              className="w-full h-[60vh] object-cover"
+              className="h-[60vh]"
+              priority={false}
+              blur={true}
+              objectFit="cover"
             />
           </div>
         </div>

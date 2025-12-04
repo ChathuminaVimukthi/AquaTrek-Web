@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import FAQSection from '../components/FAQSection';
+import OptimizedImage from '../components/OptimizedImage';
 
 const AmenitiesAndTips: React.FC = () => {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
@@ -21,10 +22,14 @@ const AmenitiesAndTips: React.FC = () => {
       />
       {/* Hero Section */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">
-        <img 
+        <OptimizedImage
           src="/images/others/ameneties1.jpg" 
           alt="Amenities and Tips" 
-          className="w-full h-full object-cover"
+          className=""
+          priority={true}
+          blur={true}
+          objectFit="cover"
+          fill={true}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 

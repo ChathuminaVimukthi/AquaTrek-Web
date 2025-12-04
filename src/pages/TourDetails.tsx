@@ -4,6 +4,7 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import OptimizedImage from '../components/OptimizedImage';
 
 interface Tour {
   id: string;
@@ -130,13 +131,13 @@ const TourDetails: React.FC = () => {
     'sunrise-wildlife': {
       id: 'sunrise-wildlife',
       title: 'Sunrise & Wildlife Tour',
-      heroImage: '/images/sunrise-tour/sunrise1.jpg',
+      heroImage: '/images/sunrise-tour/sunrise-1.jpg',
       heroTitle: 'Experience Nature at Dawn',
       heroSubtitle: '',
       mainTitle: 'Sunrise & Wildlife Adventure',
       mainDescription: 'Begin your day with the quiet magic of dawn on Rathgama Lake. Glide across glass-still waters as the sky softens into shades of gold and rose. Watch the mangroves awaken, birds take flight, and local fishermen begin their morning rituals — all while floating in a world that feels calm, untouched, and beautifully alive.',
       tourCards: [
-        { image: '/images/sunrise-tour/sunrise1.jpg', title: 'Early Morning Serenity' },
+        { image: '/images/sunrise-tour/sunrise-1.jpg', title: 'Early Morning Serenity' },
         { image: '/images/sunrise-tour/bird2.JPG', title: 'Wildlife Spotting' },
         { image: '/images/sunrise-tour/mangrove-kayaking3.JPEG', title: 'Mangrove Exploration' }
       ],
@@ -156,7 +157,7 @@ const TourDetails: React.FC = () => {
         { label: 'Location', value: 'Rathgama Lake', color: 'text-white' }
       ],
       scheduleImages: [
-        '/images/sunrise-tour/sunrise1.jpg',
+        '/images/sunrise-tour/sunrise-1.jpg',
         '/images/main-carousel/carousel2.jpg',
         '/images/sunrise-tour/bird0.jpg',
         '/images/sunrise-tour/bird2.JPG',
@@ -278,12 +279,21 @@ const TourDetails: React.FC = () => {
   // Auto-advance carousel
   useEffect(() => {
     if (tour && tour.scheduleImages) {
+      // Preload next image in carousel
+      const preloadNextImage = () => {
+        const nextSlide = (currentSlide + 1) % tour.scheduleImages.length;
+        const img = new Image();
+        img.src = tour.scheduleImages[nextSlide];
+      };
+      
+      preloadNextImage();
+      
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % tour.scheduleImages.length);
       }, 4000);
       return () => clearInterval(interval);
     }
-  }, [tour]);
+  }, [tour, currentSlide]);
 
   if (!tour) {
     return (
@@ -319,10 +329,14 @@ const TourDetails: React.FC = () => {
       />
       {/* Hero Section */}
       <div className="w-full h-screen relative">
-        <img 
+        <OptimizedImage
           src={tour.heroImage} 
           alt={tour.title} 
-          className="w-full h-full object-cover"
+          className=""
+          priority={true}
+          blur={true}
+          objectFit="cover"
+          fill={true}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-start px-4 pt-24 md:pt-32">
           <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
@@ -380,10 +394,13 @@ const TourDetails: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {tour.tourCards.map((card, index) => (
               <div key={index} className="overflow-hidden">
-                <img 
+                <OptimizedImage
                   src={card.image} 
                   alt={card.title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64"
+                  priority={false}
+                  blur={true}
+                  objectFit="cover"
                 />
                 <div className="py-6">
                   <h3 
@@ -402,10 +419,13 @@ const TourDetails: React.FC = () => {
       {/* Tour Info Section with Background */}
       <div className="w-full relative py-20 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img 
+          <OptimizedImage
             src={tour.tourInfoBg} 
             alt="Tour Info Background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full"
+            priority={false}
+            blur={true}
+            objectFit="cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-deep/50 to-brand-deep/75"></div>
         </div>
@@ -513,10 +533,13 @@ const TourDetails: React.FC = () => {
                         index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
                       }`}
                     >
-                      <img 
+                      <OptimizedImage
                         src={image} 
                         alt={`Schedule ${index + 1}`} 
-                        className="w-full h-auto object-cover max-h-[600px]"
+                        className="w-full h-auto max-h-[600px]"
+                        priority={index === 0}
+                        blur={true}
+                        objectFit="cover"
                       />
                     </div>
                   ))}

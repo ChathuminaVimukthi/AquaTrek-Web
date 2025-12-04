@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+// Temporary placeholder reducer until you add actual slices
+const placeholderReducer = (state = {}) => state;
+
 export const store = configureStore({
   reducer: {
-    // Add your reducers here
+    placeholder: placeholderReducer
   },
 });
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from './OptimizedImage';
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -11,11 +12,16 @@ const HeroSection: React.FC = () => {
   ];
 
   React.useEffect(() => {
+    // Preload next slide image
+    const nextSlide = (currentSlide + 1) % slides.length;
+    const img = new Image();
+    img.src = slides[nextSlide].image;
+    
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, [currentSlide, slides.length]);
 
   return (
     <div className="relative px-4 py-20 pb-0 h-screen">
@@ -59,10 +65,14 @@ const HeroSection: React.FC = () => {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <img
+            <OptimizedImage
               src={slide.image}
               alt={slide.text}
-              className="w-full h-full object-cover"
+              className=""
+              priority={index === 0}
+              blur={true}
+              objectFit="cover"
+              fill={true}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
             

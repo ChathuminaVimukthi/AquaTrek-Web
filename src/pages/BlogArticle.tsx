@@ -127,7 +127,7 @@ const BlogArticle: React.FC = () => {
         <h2>Supporting Local Communities</h2>
         <p>We work closely with local fishing families, ensuring that tourism benefits the community while respecting their way of life. Our guides often come from these families, sharing their knowledge and providing additional income that helps sustain traditional practices.</p>
       `,
-      image: "/images/others/local-fisherman.JPG",
+      image: "/images/others/local-fisherman.jpg",
       date: "November 10, 2024",
       tags: ["Culture", "Knowledge"]
     },
@@ -155,7 +155,7 @@ const BlogArticle: React.FC = () => {
         <h2>A Living Tradition</h2>
         <p>The Island Hermitage continues its mission today, carrying forward the vision of its founder. It stands as a testament to the possibility of preserving spiritual traditions while coexisting harmoniously with the natural environment and local community.</p>
       `,
-      image: "/images/others/island-hermitage.JPG",
+      image: "/images/others/island-hermitage.jpg",
       date: "November 5, 2024",
       tags: ["Culture", "Knowledge"]
     },
