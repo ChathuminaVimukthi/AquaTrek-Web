@@ -61,7 +61,7 @@ const TourDetails: React.FC = () => {
         { image: '/images/sunset-tour/banyan-tree2.JPG', title: 'Under The Bridges' },
         { image: '/images/sunset-tour/sunset-2.jpg', title: 'Sunset & Beach' }
       ],
-      tourInfoBg: '/images/sunset-tour/sunset-kayaking1.jpg',
+      tourInfoBg: '/images/sunset-tour/sunset-kayaking-1.jpg',
       tourInfoTitle: 'Tour Info',
       tourInfoSubtitle: 'Experience the Magic of Sunset on the beach',
       tourInfoLeft: [
@@ -86,7 +86,7 @@ const TourDetails: React.FC = () => {
         '/images/sunset-tour/bayan-tree4.JPEG',
         '/images/sunset-tour/banyan-tree5.JPEG',
         '/images/sunset-tour/cliff-1.JPG',
-        '/images/sunset-tour/sunset-kayaking1.jpg',
+        '/images/sunset-tour/sunset-kayaking-1.jpg',
         '/images/sunset-tour/sunset-kayaking2.JPEG'
       ],
       schedule: [
