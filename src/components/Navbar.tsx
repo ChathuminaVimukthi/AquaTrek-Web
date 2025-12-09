@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center" style={{ height: '48px' }}>
           {/* Logo and Name */}
-          <Link to="/" className="flex items-center space-x-3 cursor-pointer">
+          <Link to="/" className="flex items-center space-x-3 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
             <img 
               src="/logo-final.JPG" 
               alt="AquaTrek Logo" 
