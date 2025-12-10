@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -7,6 +7,10 @@ import OptimizedImage from '../components/OptimizedImage';
 
 const AmenitiesAndTips: React.FC = () => {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
@@ -23,7 +27,7 @@ const AmenitiesAndTips: React.FC = () => {
       {/* Hero Section */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">
         <OptimizedImage
-          src="/images/others/ameneties1.jpg" 
+          src="/images/others/ameneties0.jpg" 
           alt="Amenities and Tips" 
           className=""
           priority={true}

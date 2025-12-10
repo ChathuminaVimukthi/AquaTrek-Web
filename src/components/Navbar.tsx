@@ -153,7 +153,7 @@ const Navbar: React.FC = () => {
             >
               <div className="flex items-center space-x-2">
                 <PhoneIcon style={{ width: '16px', height: '16px' }} />
-                <span>+123 456 7890</span>
+                <span>+94 77 336 6171</span>
               </div>
               <span className="text-gray-500" style={{ fontSize: '10px', marginLeft: '24px', fontWeight: 600 }}>Call Us</span>
             </button>
