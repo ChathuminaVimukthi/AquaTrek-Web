@@ -10,6 +10,7 @@ import BlogArticle from './pages/BlogArticle';
 import TourDetails from './pages/TourDetails';
 import CelebrationPackage from './pages/CelebrationPackage';
 import AmenitiesAndTips from './pages/AmenitiesAndTips';
+import FutureVision from './pages/FutureVision';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/tour/:tourId" element={<TourDetails />} />
           <Route path="/celebration" element={<CelebrationPackage />} />
           <Route path="/amenities" element={<AmenitiesAndTips />} />
+          <Route path="/vision" element={<FutureVision />} />
         </Routes>
       </div>
     </Router>

@@ -45,9 +45,9 @@ const Navbar: React.FC = () => {
               <Link to="/about" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 About Us
               </Link>
-              {/* <a href="#team" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
-                Our Team
-              </a> */}
+              <Link to="/vision" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
+                Our Vision
+              </Link>
               <Link to="/blog" className="text-brand-navy hover:text-primary transition-colors uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>
                 Blog
               </Link>
@@ -115,14 +115,14 @@ const Navbar: React.FC = () => {
             >
               About Us
             </Link>
-            {/* <a
-              href="#team"
+            <Link
+              to="/vision"
               onClick={toggleMenu}
               className="block py-2 text-brand-navy hover:text-primary hover:bg-gray-50 rounded transition-colors uppercase"
               style={{ fontSize: '13px', fontWeight: 600 }}
             >
-              Our Team
-            </a> */}
+              Our Vision
+            </Link>
             <Link
               to="/blog"
               onClick={toggleMenu}

@@ -92,11 +92,11 @@ const Footer: React.FC = () => {
                   About Us
                 </Link>
               </li>
-              {/* <li>
-                <a href="#services" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
-                  Our Team
-                </a>
-              </li> */}
+              <li>
+                <Link to="/vision" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
+                  Our Vision
+                </Link>
+              </li>
               <li>
                 <Link to="/blog" className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm">
                   Blog
