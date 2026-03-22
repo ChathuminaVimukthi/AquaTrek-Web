@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Celebration Packages - Waterside Events',
   description:
     'Make your special occasions truly memorable with our customized celebration packages at Rathgama Lake. Birthdays, anniversaries, and group events in a beautiful lakeside setting.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/celebration' },
   openGraph: {
     title: 'Celebration Packages | AquaTrek Hikkaduwa',
     description: 'Celebrate by the water with AquaTrek\'s special event packages at Rathgama Lake.',

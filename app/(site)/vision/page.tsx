@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Lagoon Oasis Vision - Aqua Trek',
   description:
     "Discover Lagoon Oasis, Aqua Trek's future vision for a calm, nature-led lagoon space blending kayaking, wellness, creative work, and slow travel beside Rathgama Lagoon.",
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/vision' },
   openGraph: {
     title: 'Lagoon Oasis Vision | AquaTrek Hikkaduwa',
     description: "Aqua Trek's future vision for a calm, nature-led lagoon space beside Rathgama Lagoon.",

@@ -8,13 +8,14 @@ import ServiceGuaranteeSection from '@/components/ServiceGuaranteeSection'
 import ReviewsSection from '@/components/ReviewsSection'
 
 export const metadata: Metadata = {
-  title: 'Kayaking Tours in Rathgama Lake',
+  title: 'Kayaking Hikkaduwa | Rathgama Lake Tours - AquaTrek',
   description:
-    'Experience unforgettable kayaking adventures in Rathgama Lake, Hikkaduwa, Sri Lanka. Family-run tours featuring sunrise wildlife viewing, sunset tours, and nature exploration. Book your kayaking experience today!',
+    'Book kayaking tours in Hikkaduwa, Sri Lanka. Explore Rathgama Lake on guided sunrise & sunset kayaking adventures. Family-run eco-tourism with wildlife, mangroves & stunning views.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com' },
   openGraph: {
-    title: 'AquaTrek Hikkaduwa - Kayaking Tours in Rathgama Lake',
+    title: 'Kayaking Hikkaduwa | AquaTrek - Rathgama Lake Tours',
     description:
-      'Experience unforgettable kayaking adventures in Rathgama Lake, Hikkaduwa, Sri Lanka.',
+      'Book kayaking tours in Hikkaduwa, Sri Lanka. Guided sunrise & sunset adventures on Rathgama Lake.',
     url: 'https://aquatrekhikkaduwa.com/',
   },
 }

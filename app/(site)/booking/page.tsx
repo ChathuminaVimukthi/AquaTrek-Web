@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Book a Tour — AquaTrek Hikkaduwa',
   description:
     'Book your kayaking tour at Rathgama Lake with AquaTrek Hikkaduwa. Choose from sunrise wildlife, sunset banyan tree, or celebration packages.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/booking' },
   openGraph: {
     title: 'Book a Tour | AquaTrek Hikkaduwa',
     description: 'Reserve your kayaking tour at Rathgama Lake, Sri Lanka.',

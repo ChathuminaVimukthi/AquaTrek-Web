@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Contact Us - Book Your Kayaking Adventure',
   description:
     'Get in touch with AquaTrek Hikkaduwa to book your kayaking tour in Rathgama Lake. Contact us for reservations, inquiries, and custom tour packages. Located in Hikkaduwa, Sri Lanka.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/contact' },
   openGraph: {
     title: 'Contact Us | AquaTrek Hikkaduwa',
     description: 'Get in touch with AquaTrek Hikkaduwa to book your kayaking tour in Rathgama Lake.',

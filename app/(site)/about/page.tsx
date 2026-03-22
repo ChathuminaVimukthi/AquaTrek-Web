@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'About Us - Family-Run Kayaking Tours',
   description:
     'Learn about AquaTrek Hikkaduwa, a family-owned kayaking tour business in Rathgama Lake, Sri Lanka. Discover our story, passion for nature, and commitment to providing authentic eco-tourism experiences.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/about' },
   openGraph: {
     title: 'About Us | AquaTrek Hikkaduwa',
     description:

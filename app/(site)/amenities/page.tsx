@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Amenities & Tips for Kayaking Tours',
   description:
     'Everything you need to know for your kayaking adventure at Rathgama Lake. Learn about our amenities, safety equipment, what to bring, and helpful tips for an amazing tour experience.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/amenities' },
   openGraph: {
     title: 'Amenities & Tips | AquaTrek Hikkaduwa',
     description: 'Everything you need to know for your kayaking adventure at Rathgama Lake.',

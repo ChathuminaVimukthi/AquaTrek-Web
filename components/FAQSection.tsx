@@ -58,6 +58,19 @@ const faqs = [
   },
 ]
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer ?? (faq.list ? 'Every package includes: ' + faq.list.join(', ') : ''),
+    },
+  })),
+}
+
 export default function FAQSection() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
@@ -67,6 +80,7 @@ export default function FAQSection() {
 
   return (
     <div className="mt-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="flex flex-col items-center mb-12">
         <h2 className="text-3xl md:text-5xl font-bold text-brand-navy text-center" style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}>
           Frequently Asked Questions

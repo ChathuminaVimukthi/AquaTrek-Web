@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Blog - Nature, Wildlife & Kayaking Stories',
   description:
     'Read our blog about kayaking adventures, wildlife encounters, birdwatching tips, and the natural beauty of Rathgama Lake in Hikkaduwa, Sri Lanka. Learn about mangroves, local culture, and eco-tourism.',
+  alternates: { canonical: 'https://aquatrekhikkaduwa.com/blog' },
   openGraph: {
     title: 'Blog | AquaTrek Hikkaduwa',
     description:

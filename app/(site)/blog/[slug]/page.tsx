@@ -18,6 +18,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `https://aquatrekhikkaduwa.com/blog/${slug}` },
     openGraph: {
       title: `${post.title} | AquaTrek Hikkaduwa`,
       description: post.excerpt,
@@ -35,5 +36,21 @@ export default async function BlogArticlePage({
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) notFound()
-  return <BlogArticleClient post={post} source={post.content} />
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage ? `https://aquatrekhikkaduwa.com${post.coverImage}` : undefined,
+    datePublished: post.date,
+    url: `https://aquatrekhikkaduwa.com/blog/${slug}`,
+    author: { '@type': 'Organization', name: 'AquaTrek Hikkaduwa', url: 'https://aquatrekhikkaduwa.com' },
+    publisher: { '@type': 'Organization', name: 'AquaTrek Hikkaduwa', url: 'https://aquatrekhikkaduwa.com' },
+  }
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BlogArticleClient post={post} source={post.content} />
+    </>
+  )
 }

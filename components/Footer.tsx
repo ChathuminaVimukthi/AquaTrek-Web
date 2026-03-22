@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const localBusinessData = {
   '@context': 'https://schema.org',
-  '@type': 'TouristAttractionBusiness',
+  '@type': ['TouristAttraction', 'LocalBusiness'],
   name: 'AquaTrek Hikkaduwa',
   image: 'https://aquatrekhikkaduwa.com/logo192.png',
   description:
@@ -21,9 +21,14 @@ const localBusinessData = {
     longitude: '80.1060',
   },
   url: 'https://aquatrekhikkaduwa.com',
-  telephone: '+94 77 123 4567',
-  email: 'info@aquatrekhikkaduwa.com',
+  telephone: '+94773366171',
+  email: 'aquatrekhikk@gmail.com',
   priceRange: '$$',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '244',
+  },
   openingHours: 'Mo-Su 06:00-18:00',
   sameAs: [
     'https://www.facebook.com/aquatrekhikkaduwa',
