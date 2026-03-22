@@ -1,61 +1,42 @@
 {
-  "homepage": "https://aquatrekhikkaduwa.com",
   "name": "aquatrek-web",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@reduxjs/toolkit": "^2.11.0",
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.126",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
+    "@supabase/supabase-js": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^3.0.0",
+    "gray-matter": "^4.0.3",
+    "next": "15",
+    "next-auth": "beta",
+    "next-mdx-remote": "^5.0.0",
     "react": "^19.2.0",
+    "react-big-calendar": "^1.16.0",
     "react-dom": "^19.2.0",
-    "react-helmet-async": "^2.0.5",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^7.9.6",
-    "typescript": "^4.9.5",
-    "vite-plugin-sitemap": "^0.8.2",
-    "vite-plugin-static-copy": "^3.1.4",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md,json}\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "recharts": "^2.0.0",
+    "resend": "^4.0.0",
+    "twilio": "^5.0.0",
+    "yet-another-react-lightbox": "^3.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.1.1",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.7",
+    "@types/react-big-calendar": "^1.16.0",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.22",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.0",
     "tailwindcss": "^3.4.18",
-    "vite": "^7.2.4"
+    "typescript": "^5.0.0"
   }
 }
