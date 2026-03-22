@@ -7,17 +7,17 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline'
 const celebration = {
   id: 'celebration-package',
   title: 'Celebrate by the Water',
-  heroImage: '/images/garden-celeb/main.jpg',
+  heroImage: '/images/garden-celeb/main.webp',
   heroTitle: 'Create Unforgettable Memories',
   mainTitle: 'Special Celebration Packages',
   mainDescription:
     "Make your special occasions truly memorable with our customized celebration packages. Whether it's a birthday, anniversary, or any milestone worth celebrating, we create the perfect waterside experience for you and your loved ones.",
   tourCards: [
-    { image: '/images/garden-celeb/MBD03090.jpg', title: 'Birthday Celebrations' },
-    { image: '/images/garden-celeb/PMD02696.jpg', title: 'Anniversary Specials' },
-    { image: '/images/garden-celeb/PMD02704.jpg', title: 'Group Events' },
+    { image: '/images/garden-celeb/MBD03090.webp', title: 'Birthday Celebrations' },
+    { image: '/images/garden-celeb/PMD02696.webp', title: 'Anniversary Specials' },
+    { image: '/images/garden-celeb/PMD02704.webp', title: 'Group Events' },
   ],
-  tourInfoBg: '/images/garden-celeb/PMD02704.jpg',
+  tourInfoBg: '/images/garden-celeb/PMD02704.webp',
   tourInfoTitle: 'Celebration Info',
   tourInfoSubtitle: 'Personalized Experiences for Your Special Day',
   tourInfoLeft: [
@@ -111,7 +111,7 @@ export default function CelebrationPackageClient() {
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="w-full md:w-1/2 flex items-center justify-center">
               <div className="relative w-full max-w-md aspect-[4/3]">
-                <Image src="/images/garden-celeb/PMD02704.jpg" alt="Celebration" fill className="object-cover" />
+                <Image src="/images/garden-celeb/PMD02704.webp" alt="Celebration" fill className="object-cover" />
               </div>
             </div>
             <div className="w-full md:w-1/2 text-left">

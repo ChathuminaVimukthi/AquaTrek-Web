@@ -12,7 +12,7 @@ export default function ToursSection() {
     {
       id: 'sunset-banyan-tree',
       bookingId: 'sunset-banyan-tree',
-      image: '/images/sunset-tour/sunset-kayaking-1.jpg',
+      image: '/images/sunset-tour/sunset-kayaking-1.webp',
       title: 'Sunset & Banyan Tree Tour',
       description: 'Late afternoon adventure to a majestic Banyan tree. Ends at Dodanduwa fishing harbour with a stunning ocean sunset.',
       badge: 'Route A',
@@ -24,7 +24,7 @@ export default function ToursSection() {
     {
       id: 'sunrise-wildlife',
       bookingId: 'sunrise-wildlife',
-      image: '/images/sunrise-tour/mangrove-kayaking5.jpg',
+      image: '/images/sunrise-tour/mangrove-kayaking5.webp',
       title: 'Sunrise & Wildlife Tour',
       description: 'Early morning serenity on calm waters. Explore mangrove canals, spot local wildlife, and watch traditional fishermen at work.',
       badge: 'Route B',
@@ -36,7 +36,7 @@ export default function ToursSection() {
     {
       id: 'celebration-package',
       bookingId: 'celebration',
-      image: '/images/garden-celeb/main.jpg',
+      image: '/images/garden-celeb/main.webp',
       title: 'Celebrate by the Water',
       description: 'Create unforgettable memories with our special celebration packages. Perfect for birthdays, anniversaries, or any special occasion.',
       badge: 'Special',

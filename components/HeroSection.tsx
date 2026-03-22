@@ -7,10 +7,10 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    { image: '/images/main-carousel/carousel1.jpg', text: 'Explore Hidden Waters' },
-    { image: '/images/sunrise-tour/bird0.jpg', text: 'Nature At Peace' },
-    { image: '/images/sunset-tour/sunset-1.jpg', text: 'Sunset Adventures Await' },
-    { image: '/images/main-carousel/carousel2.jpg', text: 'Discover Wildlife Wonders' },
+    { image: '/images/main-carousel/carousel1.webp', text: 'Explore Hidden Waters' },
+    { image: '/images/sunrise-tour/bird0.webp', text: 'Nature At Peace' },
+    { image: '/images/sunset-tour/sunset-1.webp', text: 'Sunset Adventures Await' },
+    { image: '/images/main-carousel/carousel2.webp', text: 'Discover Wildlife Wonders' },
   ]
 
   useEffect(() => {

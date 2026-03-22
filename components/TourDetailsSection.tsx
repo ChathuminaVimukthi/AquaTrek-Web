@@ -9,7 +9,7 @@ export default function TourDetailsSection() {
         <div className="w-full md:w-1/2 order-1 md:order-1">
           <div className="relative w-full h-40 md:h-[560px]">
             <Image
-              src="/images/others/before-you-paddle.jpg"
+              src="/images/others/before-you-paddle.webp"
               alt="Kayaking tour"
               fill
               className="object-cover"

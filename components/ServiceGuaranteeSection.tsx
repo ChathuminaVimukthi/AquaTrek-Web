@@ -8,7 +8,7 @@ export default function ServiceGuaranteeSection() {
         <div className="w-full md:w-1/2 order-1 md:order-1">
           <div className="relative w-full h-64 md:h-full min-h-64">
             <Image
-              src="/images/main-carousel/carousel1.jpg"
+              src="/images/main-carousel/carousel1.webp"
               alt="Professional service"
               fill
               className="object-cover"

@@ -19,7 +19,7 @@ export default function AmenitiesPage() {
       {/* Hero Section */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">
         <Image
-          src="/images/others/ameneties0.jpg"
+          src="/images/others/ameneties0.webp"
           alt="Amenities and Tips"
           fill
           className="object-cover"

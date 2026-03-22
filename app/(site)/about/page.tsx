@@ -19,7 +19,7 @@ export default function AboutPage() {
       {/* Hero Image Section */}
       <div className="w-full h-screen relative">
         <Image
-          src="/images/others/aboutus.jpg"
+          src="/images/others/aboutus.webp"
           alt="Rathgama Lake"
           fill
           className="object-cover"
@@ -41,7 +41,7 @@ export default function AboutPage() {
           {/* Left Side - Image */}
           <div className="order-2 md:order-1 relative h-[60vh]">
             <Image
-              src="/images/aboutus/team1.jpg"
+              src="/images/aboutus/team1.webp"
               alt="Family at Rathgama Lake"
               fill
               className="object-cover"
@@ -110,7 +110,7 @@ export default function AboutPage() {
           {/* Right Side - Image */}
           <div className="relative h-[60vh]">
             <Image
-              src="/images/aboutus/approach.jpg"
+              src="/images/aboutus/approach.webp"
               alt="Kayaking at Rathgama Lake"
               fill
               className="object-cover"

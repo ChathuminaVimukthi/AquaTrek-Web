@@ -33,7 +33,7 @@ export default function BlogPage() {
       {/* Hero Image Section */}
       <div className="w-full h-screen relative">
         <Image
-          src="/images/main-carousel/carousel7.jpg"
+          src="/images/main-carousel/carousel7.webp"
           alt="Rathgama Lake Blog"
           fill
           className="object-cover"

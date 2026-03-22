@@ -67,7 +67,7 @@ export default function VisionPage() {
       {/* Hero Section */}
       <div className="relative w-full h-[70vh] md:h-[80vh]">
         <Image
-          src="/images/main-carousel/carousel7.jpg"
+          src="/images/main-carousel/carousel7.webp"
           alt="Lagoon Oasis future vision"
           fill
           className="object-cover"
@@ -100,7 +100,7 @@ export default function VisionPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           <div className="order-2 md:order-1 relative h-[60vh]">
             <Image
-              src="/images/sunrise-tour/mangrove-kayaking2.jpg"
+              src="/images/sunrise-tour/mangrove-kayaking2.webp"
               alt="Sunrise prep on the lagoon deck"
               fill
               className="object-cover"
@@ -167,7 +167,7 @@ export default function VisionPage() {
           </div>
           <div className="relative h-[60vh]">
             <Image
-              src="/images/sunrise-tour/sunrise-1.jpg"
+              src="/images/sunrise-tour/sunrise-1.webp"
               alt="Sunrise over Rathgama Lagoon"
               fill
               className="object-cover"
@@ -218,7 +218,7 @@ export default function VisionPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           <div className="order-2 md:order-1 relative h-[60vh]">
             <Image
-              src="/images/sunset-tour/sunset-2.jpg"
+              src="/images/sunset-tour/sunset-2.webp"
               alt="Slow sunset gathering"
               fill
               className="object-cover"

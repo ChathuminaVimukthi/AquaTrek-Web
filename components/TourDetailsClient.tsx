@@ -28,17 +28,17 @@ const tours: { [key: string]: Tour } = {
   'sunset-banyan-tree': {
     id: 'sunset-banyan-tree',
     title: 'Sunset & Banyan Tree Tour',
-    heroImage: '/images/sunset-tour/sunset-1.jpg',
+    heroImage: '/images/sunset-tour/sunset-1.webp',
     heroTitle: 'Sunset & Banyan Tree Adventure!',
     heroSubtitle: '',
     mainTitle: 'Sunset Over Mangroves: The Banyan Trail!',
     mainDescription: 'Explore a majestic Banyan tree over the lake, climb and snap unforgettable photos, then paddle through mangrove channels alive with wildlife, including playful fruit bats. End your evening at Dodanduwa beach with cliff-top views and a golden sunset over the ocean — adventure, nature, and serenity in one unforgettable tour.',
     tourCards: [
-      { image: '/images/sunset-tour/banyan-tree1.JPEG', title: 'Banyan Tree' },
-      { image: '/images/sunset-tour/banyan-tree2.JPG', title: 'Under The Bridges' },
-      { image: '/images/sunset-tour/sunset-2.jpg', title: 'Sunset & Beach' },
+      { image: '/images/sunset-tour/banyan-tree1.webp', title: 'Banyan Tree' },
+      { image: '/images/sunset-tour/banyan-tree2.webp', title: 'Under The Bridges' },
+      { image: '/images/sunset-tour/sunset-2.webp', title: 'Sunset & Beach' },
     ],
-    tourInfoBg: '/images/sunset-tour/sunset-kayaking-1.jpg',
+    tourInfoBg: '/images/sunset-tour/sunset-kayaking-1.webp',
     tourInfoTitle: 'Tour Info',
     tourInfoSubtitle: 'Experience the Magic of Sunset on the beach',
     tourInfoLeft: [
@@ -54,17 +54,17 @@ const tours: { [key: string]: Tour } = {
       { label: 'Location', value: 'Rathgama Lake', color: 'text-white' },
     ],
     scheduleImages: [
-      '/images/sunset-tour/sunset-cliff1.JPEG',
-      '/images/sunset-tour/sunset-1.jpg',
-      '/images/sunset-tour/sunset-2.jpg',
-      '/images/sunset-tour/banyan-tree1.JPEG',
-      '/images/sunset-tour/banyan-tree2.JPG',
-      '/images/sunset-tour/banyan-tree3.jpg',
-      '/images/sunset-tour/bayan-tree4.JPEG',
-      '/images/sunset-tour/banyan-tree5.JPEG',
-      '/images/sunset-tour/cliff-1.JPG',
-      '/images/sunset-tour/sunset-kayaking-1.jpg',
-      '/images/sunset-tour/sunset-kayaking2.JPEG',
+      '/images/sunset-tour/sunset-cliff1.webp',
+      '/images/sunset-tour/sunset-1.webp',
+      '/images/sunset-tour/sunset-2.webp',
+      '/images/sunset-tour/banyan-tree1.webp',
+      '/images/sunset-tour/banyan-tree2.webp',
+      '/images/sunset-tour/banyan-tree3.webp',
+      '/images/sunset-tour/bayan-tree4.webp',
+      '/images/sunset-tour/banyan-tree5.webp',
+      '/images/sunset-tour/cliff-1.webp',
+      '/images/sunset-tour/sunset-kayaking-1.webp',
+      '/images/sunset-tour/sunset-kayaking2.webp',
     ],
     schedule: [
       { icon: '🌅', title: 'Departure & Paddle Start', description: "Meet at our starting point and get ready for an evening of adventure. We'll provide all gear, a friendly briefing, and a refreshing welcome drink before you set off across the calm waters." },
@@ -79,17 +79,17 @@ const tours: { [key: string]: Tour } = {
   'sunrise-wildlife': {
     id: 'sunrise-wildlife',
     title: 'Sunrise & Wildlife Tour',
-    heroImage: '/images/sunrise-tour/sunrise-1.jpg',
+    heroImage: '/images/sunrise-tour/sunrise-1.webp',
     heroTitle: 'Experience Nature at Dawn',
     heroSubtitle: '',
     mainTitle: 'Sunrise & Wildlife Adventure',
     mainDescription: 'Begin your day with the quiet magic of dawn on Rathgama Lake. Glide across glass-still waters as the sky softens into shades of gold and rose. Watch the mangroves awaken, birds take flight, and local fishermen begin their morning rituals — all while floating in a world that feels calm, untouched, and beautifully alive.',
     tourCards: [
-      { image: '/images/sunrise-tour/sunrise-1.jpg', title: 'Early Morning Serenity' },
-      { image: '/images/sunrise-tour/bird2.JPG', title: 'Wildlife Spotting' },
-      { image: '/images/sunrise-tour/mangrove-kayaking3.JPEG', title: 'Mangrove Exploration' },
+      { image: '/images/sunrise-tour/sunrise-1.webp', title: 'Early Morning Serenity' },
+      { image: '/images/sunrise-tour/bird2.webp', title: 'Wildlife Spotting' },
+      { image: '/images/sunrise-tour/mangrove-kayaking3.webp', title: 'Mangrove Exploration' },
     ],
-    tourInfoBg: '/images/sunrise-tour/mangrove-kayaking2.jpg',
+    tourInfoBg: '/images/sunrise-tour/mangrove-kayaking2.webp',
     tourInfoTitle: 'Tour Info',
     tourInfoSubtitle: 'Experience the Magic of Sunrise on the Lake',
     tourInfoLeft: [
@@ -105,17 +105,17 @@ const tours: { [key: string]: Tour } = {
       { label: 'Location', value: 'Rathgama Lake', color: 'text-white' },
     ],
     scheduleImages: [
-      '/images/sunrise-tour/sunrise-1.jpg',
-      '/images/main-carousel/carousel2.jpg',
-      '/images/sunrise-tour/bird0.jpg',
-      '/images/sunrise-tour/bird6.jpg',
-      '/images/sunrise-tour/bird7.jpg',
-      '/images/sunrise-tour/bird8.jpg',
-      '/images/sunrise-tour/bird2.JPG',
-      '/images/sunrise-tour/watermonitor1.JPG',
-      '/images/sunrise-tour/mangrove-kayaking3.JPEG',
-      '/images/sunrise-tour/mangrove-kayaking4.JPG',
-      '/images/sunrise-tour/mangrove-kayaking5.jpg',
+      '/images/sunrise-tour/sunrise-1.webp',
+      '/images/main-carousel/carousel2.webp',
+      '/images/sunrise-tour/bird0.webp',
+      '/images/sunrise-tour/bird6.webp',
+      '/images/sunrise-tour/bird7.webp',
+      '/images/sunrise-tour/bird8.webp',
+      '/images/sunrise-tour/bird2.webp',
+      '/images/sunrise-tour/watermonitor1.webp',
+      '/images/sunrise-tour/mangrove-kayaking3.webp',
+      '/images/sunrise-tour/mangrove-kayaking4.webp',
+      '/images/sunrise-tour/mangrove-kayaking5.webp',
     ],
     schedule: [
       { icon: '🌅', title: 'Arrival', description: "Arrive just before sunrise and feel the quiet beauty of the early morning settle around you. We'll greet you with a warm welcome and a refreshing welcome drink to start your day right. After a friendly briefing and getting you set with gear, you'll have a moment to relax and take in the stillness of the waking lake." },
@@ -238,7 +238,7 @@ export default function TourDetailsClient({ tourId }: { tourId: string }) {
         <div className="relative mx-auto px-8">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="w-full md:w-1/2 flex items-center justify-center">
-              <Image src="/FinalMap.png" alt="Tour Map" width={500} height={500} className="w-full max-w-md" />
+              <Image src="/FinalMap.webp" alt="Tour Map" width={500} height={500} className="w-full max-w-md" />
             </div>
             <div className="w-full md:w-1/2 text-left">
               <p className="text-secondary-hover mb-2 text-xl md:text-2xl" style={{ fontFamily: '"Gilroy", Sans-serif' }}>
