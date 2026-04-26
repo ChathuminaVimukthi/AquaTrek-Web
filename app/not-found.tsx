@@ -3,33 +3,44 @@ import Image from 'next/image'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div
+      className="min-h-screen flex items-center justify-center px-4"
+      style={{ background: 'var(--surface-page)' }}
+    >
       <div className="text-center max-w-lg">
         <div className="flex justify-center mb-8">
           <Image src="/images/logo.png" alt="AquaTrek Hikkaduwa" width={80} height={80} />
         </div>
-        <h1
-          className="text-8xl md:text-9xl font-bold text-brand-navy mb-4"
-          style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+        <p
+          className="mb-2"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'var(--text-9xl)',
+            fontWeight: 800,
+            color: 'var(--brand-primary)',
+            lineHeight: 1,
+          }}
         >
           404
-        </h1>
-        <h2
-          className="text-2xl md:text-3xl font-bold text-brand-navy mb-4"
-          style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+        </p>
+        <h1
+          className="mb-4"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'var(--text-3xl)',
+            color: 'var(--text-heading)',
+            letterSpacing: 'var(--tracking-tight)',
+          }}
         >
           Page Not Found
-        </h2>
-        <p
-          className="text-gray-600 mb-8"
-          style={{ fontFamily: '"Asap", Sans-serif' }}
-        >
+        </h1>
+        <p className="mb-8" style={{ color: 'var(--text-secondary)', fontSize: 'var(--text-base)' }}>
           The page you&apos;re looking for doesn&apos;t exist. Head back to explore our kayaking tours.
         </p>
         <Link
           href="/"
-          className="bg-brand-navy hover:bg-primary text-white px-8 py-4 font-semibold transition-colors duration-300 inline-block"
-          style={{ fontFamily: '"Asap", Sans-serif' }}
+          className="inline-flex items-center px-7 py-3 rounded-pill text-sm font-semibold transition-all hover:-translate-y-px hover:shadow-sm"
+          style={{ background: 'var(--brand-accent)', color: 'white' }}
         >
           Back to Home
         </Link>

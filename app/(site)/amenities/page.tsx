@@ -1,358 +1,291 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import Link from 'next/link'
+import { ImageWithOverlay } from '@/components/ui/ImageWithOverlay'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'Amenities & Tips for Kayaking Tours',
+  title: 'Amenities & Tips for Your Kayaking Tour | AquaTrek Hikkaduwa',
   description:
-    'Everything you need to know for your kayaking adventure at Rathgama Lake. Learn about our amenities, safety equipment, what to bring, and helpful tips for an amazing tour experience.',
+    'Everything you need to know before your kayaking tour at Rathgama Lake — gear provided, what to bring, safety info, and honest tips from our guides in Hikkaduwa, Sri Lanka.',
   alternates: { canonical: 'https://aquatrekhikkaduwa.com/amenities' },
   openGraph: {
     title: 'Amenities & Tips | AquaTrek Hikkaduwa',
     description: 'Everything you need to know for your kayaking adventure at Rathgama Lake.',
     url: 'https://aquatrekhikkaduwa.com/amenities',
+    images: [{ url: '/og-images/homepage.jpg', width: 1200, height: 630, alt: 'Kayaking on Rathgama Lake' }],
   },
 }
 
+const amenities = [
+  {
+    icon: '🛟',
+    title: 'Safety Equipment',
+    items: ['Quality life jackets for all sizes', 'Waterproof phone cases provided', 'Trained guide & lifeguard on all tours', 'First aid kit on-site'],
+  },
+  {
+    icon: '🚿',
+    title: 'On-Site Facilities',
+    items: ['Changing rooms', 'Clean bathroom facilities', 'Shaded rest areas & hammocks', 'Free on-site parking'],
+  },
+  {
+    icon: '🥥',
+    title: 'Refreshments',
+    items: ['Welcome drink on arrival', 'Fresh water bottle included', 'Tea after every tour', 'Snacks on Full Lake Adventure'],
+  },
+  {
+    icon: '🛶',
+    title: 'Quality Gear',
+    items: ['Well-maintained open-top kayaks', 'Comfortable ergonomic paddles', 'Dry bags for belongings', 'Waterproof phone cases'],
+  },
+  {
+    icon: '🧭',
+    title: 'Expert Guides',
+    items: ['Pre-tour safety briefing', 'Paddling technique instruction', 'Local wildlife & cultural knowledge', 'Sunrise & sunset specialist guides'],
+  },
+  {
+    icon: '👨‍👩‍👧',
+    title: 'For Everyone',
+    items: ['Beginner-friendly — no experience needed', 'Child-sized life jackets available', 'Family & group sessions (up to 35)', 'Solo travellers warmly welcome'],
+  },
+]
+
+const tips = [
+  {
+    heading: 'What to Bring',
+    items: [
+      { label: 'Reef-safe sunscreen', detail: 'The sun reflects off the water — apply before you arrive' },
+      { label: 'Wide-brim hat & sunglasses', detail: 'Essential at 6°N latitude, even on overcast mornings' },
+      { label: 'Light quick-dry clothing', detail: 'Long sleeves protect better than a T-shirt; you will thank yourself later' },
+      { label: 'Closed-toe water shoes', detail: 'Flip-flops work but water shoes grip better when boarding' },
+      { label: 'Small towel', detail: 'For after the paddle; leave extra clothes in the vehicle' },
+      { label: 'Binoculars (optional)', detail: '8×42 is ideal for spotting kingfishers and raptors' },
+    ],
+  },
+  {
+    heading: 'What to Expect',
+    items: [
+      { label: 'Calm, flat water', detail: 'Rathgama is a sheltered lake — no surf, no currents in the channels' },
+      { label: 'Wildlife from the kayak', detail: 'Kingfishers, herons, monitors — approach within metres quietly' },
+      { label: 'A relaxed pace', detail: 'We stop, look, and listen — this is not a fitness paddle' },
+      { label: 'You may get splashed', detail: 'Not much, but quick-dry clothes help if you do' },
+      { label: 'Warm water year-round', detail: '27–30°C — comfortable for swimming if you want to' },
+      { label: 'Smiling guides', detail: 'Rathgama is our home and we genuinely love sharing it' },
+    ],
+  },
+  {
+    heading: 'Best Times to Go',
+    items: [
+      { label: 'Sunrise Tour (6:00 AM)', detail: 'Peak wildlife activity, cool air, golden light — our top recommendation' },
+      { label: 'Morning Tour (8:00 AM)', detail: 'Great for families; still active wildlife before the heat builds' },
+      { label: 'Sunset Tour (5:00 PM)', detail: 'Brahminy Kites, fruit bats, and dramatic skies over the lake' },
+      { label: 'November – February', detail: 'Dry season peak: migratory birds + best photography light' },
+      { label: 'May – August', detail: 'Lush green season, fewer tourists, kingfishers breeding' },
+      { label: 'Weekdays over weekends', detail: 'Quieter lake, more personal experience with guides' },
+    ],
+  },
+  {
+    heading: 'Safety Reminders',
+    items: [
+      { label: 'Always wear your life jacket', detail: 'Even strong swimmers — it is non-negotiable on our tours' },
+      { label: 'Follow your guide', detail: 'They know the channels, the tides, and the weather patterns' },
+      { label: 'Stay hydrated', detail: 'Drink water before and after; dehydration sneaks up in tropical heat' },
+      { label: 'Sit, do not stand', detail: 'Open-top kayaks are stable — standing is not worth the risk' },
+      { label: 'Respect the wildlife', detail: 'Paddle slowly near animals; the closer approach goes to those who wait' },
+      { label: 'Tell us about health concerns', detail: 'We adapt tours for most needs — just let us know beforehand' },
+    ],
+  },
+]
+
 export default function AmenitiesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="w-full h-[50vh] md:h-[60vh] relative">
-        <Image
-          src="/images/others/ameneties0.webp"
-          alt="Amenities and Tips"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <main>
+      {/* Hero */}
+      <ImageWithOverlay
+        src="/images/others/ameneties0.webp"
+        alt="Kayaking amenities at AquaTrek, Rathgama Lake"
+        className="h-[70vh]"
+        priority
+      >
+        <div className="h-full container flex flex-col justify-end pb-16 lg:pb-20">
+          <p className="eyebrow text-white/70 mb-4">Before You Paddle</p>
           <h1
-            className="text-4xl md:text-7xl font-bold text-white text-center px-4"
-            style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+            className="text-white max-w-2xl"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'var(--text-5xl)',
+              letterSpacing: 'var(--tracking-tight)',
+              lineHeight: 'var(--leading-tight)',
+            }}
           >
             Amenities &amp; Tips
           </h1>
+          <p className="mt-3 text-base lg:text-lg max-w-lg" style={{ color: 'rgba(255,255,255,0.80)', lineHeight: 'var(--leading-relaxed)' }}>
+            Everything we provide — and everything worth knowing — before you get on the water.
+          </p>
         </div>
-      </div>
+      </ImageWithOverlay>
 
-      {/* Amenities Section */}
-      <div className="w-full bg-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
-          <div className="text-center mb-12">
+      {/* What's Included */}
+      <section className="section" style={{ background: 'var(--surface-page)' }}>
+        <div className="container">
+          <div className="text-center mb-12 reveal">
+            <p className="eyebrow mb-3">Included With Every Tour</p>
             <h2
-              className="text-3xl md:text-6xl font-bold text-brand-navy mb-4"
-              style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-4xl)',
+                color: 'var(--text-heading)',
+                letterSpacing: 'var(--tracking-tight)',
+              }}
             >
-              Everything You Need for a Great Experience
+              Everything You Need, Provided
             </h2>
-            <p
-              className="text-lg text-gray-700 max-w-3xl mx-auto"
-              style={{ fontFamily: '"Gilroy", Sans-serif' }}
-            >
-              We&apos;ve thought of everything to make your kayaking adventure comfortable, safe, and memorable.
+            <p className="mt-4 mx-auto" style={{ color: 'var(--text-secondary)', maxWidth: '52ch' }}>
+              Turn up and paddle. We take care of the gear, the safety, and the local knowledge.
             </p>
           </div>
 
-          {/* Amenities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* Safety Equipment */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  Safety First
-                </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-children">
+            {amenities.map((a) => (
+              <div
+                key={a.title}
+                className="reveal rounded-card p-7 flex flex-col gap-4"
+                style={{
+                  background: 'var(--surface-raised)',
+                  border: 'var(--card-border)',
+                  boxShadow: 'var(--shadow-card)',
+                }}
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-11 h-11 rounded-full flex items-center justify-center text-xl flex-shrink-0"
+                    style={{ background: 'var(--brand-accent-subtle)' }}
+                  >
+                    {a.icon}
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: 'var(--text-lg)',
+                      fontWeight: 'var(--font-bold)',
+                      color: 'var(--text-heading)',
+                    }}
+                  >
+                    {a.title}
+                  </h3>
+                </div>
+                <ul className="space-y-2">
+                  {a.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                      <span className="mt-0.5 flex-shrink-0" style={{ color: 'var(--brand-accent)' }}>✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Quality life jackets for all sizes</li>
-                <li>✓ Waterproof mobile phone cases</li>
-                <li>✓ Experienced guides &amp; lifeguards</li>
-                <li>✓ First aid equipment on-site</li>
-              </ul>
-            </div>
-
-            {/* Facilities */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  Clean Facilities
-                </h3>
-              </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Changing rooms</li>
-                <li>✓ Clean bathroom facilities</li>
-                <li>✓ Shaded rest areas &amp; hammocks</li>
-                <li>✓ Free on-site parking</li>
-              </ul>
-            </div>
-
-            {/* Refreshments */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  Refreshments
-                </h3>
-              </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Welcome drinks on arrival</li>
-                <li>✓ Fresh water bottles</li>
-                <li>✓ Tea after the tour</li>
-                <li>✓ Snacks (full adventure package)</li>
-              </ul>
-            </div>
-
-            {/* Equipment */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  Quality Gear
-                </h3>
-              </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Well-maintained kayaks</li>
-                <li>✓ Comfortable paddles</li>
-                <li>✓ Dry bags for belongings</li>
-                <li>✓ Photography equipment available</li>
-              </ul>
-            </div>
-
-            {/* Guidance */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  Expert Support
-                </h3>
-              </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Pre-tour safety briefing</li>
-                <li>✓ Paddling technique instruction</li>
-                <li>✓ Local knowledge &amp; stories</li>
-                <li>✓ Wildlife spotting guidance</li>
-              </ul>
-            </div>
-
-            {/* Accessibility */}
-            <div className="bg-sand-beige p-8 rounded-lg text-left">
-              <div className="flex items-center mb-4">
-                <svg className="w-10 h-10 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-                <h3
-                  className="text-2xl font-bold text-brand-navy"
-                  style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-                >
-                  For Everyone
-                </h3>
-              </div>
-              <ul className="space-y-2 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li>✓ Family-friendly environment</li>
-                <li>✓ Beginner-friendly approach</li>
-                <li>✓ Child-sized life jackets</li>
-                <li>✓ Group accommodations (up to 35)</li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Tips Section */}
-      <div className="w-full bg-secondary py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
-          <div className="text-center mb-12">
+      {/* Tips grid */}
+      <section className="section" style={{ background: 'var(--neutral-200)' }}>
+        <div className="container">
+          <div className="text-center mb-12 reveal">
+            <p className="eyebrow mb-3">From Our Guides</p>
             <h2
-              className="text-3xl md:text-6xl font-bold text-white mb-4"
-              style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-4xl)',
+                color: 'var(--text-heading)',
+                letterSpacing: 'var(--tracking-tight)',
+              }}
             >
-              Pro Tips for Your Visit
+              Tips for a Great Visit
             </h2>
-            <p
-              className="text-lg text-white max-w-3xl mx-auto"
-              style={{ fontFamily: '"Gilroy", Sans-serif' }}
-            >
-              Make the most of your time on the water with these helpful tips from our local experts.
+            <p className="mt-4 mx-auto" style={{ color: 'var(--text-secondary)', maxWidth: '50ch' }}>
+              Honest advice from people who paddle this lake every single day.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* What to Bring */}
-            <div className="bg-white p-8">
-              <h3
-                className="text-3xl font-bold text-brand-navy mb-6"
-                style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {tips.map((section) => (
+              <div
+                key={section.heading}
+                className="reveal rounded-card p-7"
+                style={{
+                  background: 'var(--surface-raised)',
+                  border: 'var(--card-border)',
+                  boxShadow: 'var(--shadow-card)',
+                }}
               >
-                What to Bring
-              </h3>
-              <ul className="space-y-3 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Sunscreen:</strong> The sun reflects off the water — protect your skin</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Hat &amp; Sunglasses:</strong> Keep the glare at bay</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Comfortable Clothing:</strong> Light, quick-dry clothes work best</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Closed-Toe Shoes:</strong> Water shoes or sneakers are ideal</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Towel:</strong> For after your paddle</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Extra Clothes:</strong> Keep them in your vehicle</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* What to Expect */}
-            <div className="bg-white p-8">
-              <h3
-                className="text-3xl font-bold text-brand-navy mb-6"
-                style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-              >
-                What to Expect
-              </h3>
-              <ul className="space-y-3 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Calm Waters:</strong> Rathgama Lake is beginner-friendly and peaceful</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Wildlife Encounters:</strong> Birds, fish, and sometimes water monitors</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Relaxed Pace:</strong> We take our time — no rushing</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>You Might Get Wet:</strong> Not much, but splashes happen</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Beautiful Scenery:</strong> Mangroves, islands, and open water views</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Friendly Locals:</strong> We love sharing our home with you</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Best Times to Visit */}
-            <div className="bg-white p-8">
-              <h3
-                className="text-3xl font-bold text-brand-navy mb-6"
-                style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-              >
-                Best Times to Visit
-              </h3>
-              <ul className="space-y-3 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Sunrise Tours (6:00 AM):</strong> Cool, calm, and magical light</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Morning Tours (8:00 AM):</strong> Great for families and photography</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Afternoon Tours (3:00 PM):</strong> Warm weather, vibrant energy</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Sunset Tours (5:00 PM):</strong> Stunning colors and romantic vibes</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Weekdays:</strong> Quieter lake, more personal experience</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Safety Reminders */}
-            <div className="bg-white p-8">
-              <h3
-                className="text-3xl font-bold text-brand-navy mb-6"
-                style={{ fontFamily: '"Gilroy", Sans-serif', fontWeight: 800 }}
-              >
-                Safety Reminders
-              </h3>
-              <ul className="space-y-3 text-gray-700" style={{ fontFamily: '"Asap", Sans-serif' }}>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Always Wear Your Life Jacket:</strong> Even if you&apos;re a strong swimmer</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Listen to Your Guide:</strong> They know the lake and weather conditions</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Stay Hydrated:</strong> Drink water before and after paddling</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Don&apos;t Stand in the Kayak:</strong> Balance is tricky on water</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Respect Wildlife:</strong> Observe from a distance</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-2 mt-1">•</span>
-                  <span><strong>Let Us Know:</strong> Tell us about any health concerns beforehand</span>
-                </li>
-              </ul>
-            </div>
+                <h3
+                  className="mb-5"
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: 'var(--text-xl)',
+                    fontWeight: 'var(--font-bold)',
+                    color: 'var(--text-heading)',
+                    borderBottom: '2px solid var(--brand-accent)',
+                    paddingBottom: '0.75rem',
+                  }}
+                >
+                  {section.heading}
+                </h3>
+                <ul className="space-y-3">
+                  {section.items.map((item) => (
+                    <li key={item.label} className="flex items-start gap-3">
+                      <span
+                        className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ background: 'var(--brand-accent)', marginTop: '0.4rem' }}
+                      />
+                      <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                        <strong style={{ color: 'var(--text-primary)', fontWeight: 'var(--font-semibold)' }}>
+                          {item.label}:
+                        </strong>{' '}
+                        {item.detail}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* FAQ Section */}
-      <div className="w-full bg-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-16">
+      {/* FAQ */}
+      <section className="section" style={{ background: 'var(--surface-page)' }}>
+        <div className="container">
           <FAQSection />
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{ background: 'var(--brand-primary)' }}>
+        <div className="container py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="eyebrow mb-2" style={{ color: 'var(--brand-primary-muted)' }}>Ready When You Are</p>
+            <p
+              className="text-white"
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-2xl)',
+                fontWeight: 'var(--font-bold)',
+              }}
+            >
+              Same-day bookings are usually available.
+            </p>
+          </div>
+          <Link
+            href="/booking"
+            className="flex-shrink-0 inline-flex items-center px-7 py-3 rounded-pill text-sm font-semibold transition-all hover:-translate-y-px hover:shadow-lg"
+            style={{ background: 'var(--brand-accent)', color: 'white' }}
+          >
+            Book a Tour →
+          </Link>
+        </div>
+      </section>
+    </main>
   )
 }

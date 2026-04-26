@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
               <tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Group Size</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${groupSize} ${groupSize === 1 ? 'person' : 'people'}</td></tr>
               <tr><td style="padding: 8px; border-bottom: 1px solid #eee; font-weight: bold;">Estimated Total</td><td style="padding: 8px; border-bottom: 1px solid #eee;">${totalDisplay}</td></tr>
             </table>
-            <p>We'll confirm your booking within <strong>24 hours</strong>. If you have any questions, WhatsApp us at <strong>+94 77 336 6171</strong>.</p>
+            <p>We'll confirm your booking within <strong>24 hours</strong>. If you have any questions, WhatsApp us at <strong>+94 72 130 1524</strong>.</p>
             <p style="color: #999; font-size: 12px;">AquaTrek Hikkaduwa · Rathgama Lake, Sri Lanka</p>
           </div>
         `,

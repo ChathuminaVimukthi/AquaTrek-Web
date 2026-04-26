@@ -64,7 +64,7 @@ export async function PATCH(
                 <tr><td style="padding:8px; border-bottom:1px solid #eee; font-weight:bold;">Group Size</td><td style="padding:8px; border-bottom:1px solid #eee;">${booking.group_size}</td></tr>
                 <tr><td style="padding:8px; border-bottom:1px solid #eee; font-weight:bold;">Total</td><td style="padding:8px; border-bottom:1px solid #eee;">${totalDisplay}</td></tr>
               </table>
-              <p>Questions? WhatsApp us at <strong>+94 77 336 6171</strong></p>
+              <p>Questions? WhatsApp us at <strong>+94 72 130 1524</strong></p>
             </div>`,
         })
       } catch (err) { console.error('Confirmation email error:', err) }
@@ -80,7 +80,7 @@ export async function PATCH(
             <div style="font-family: Arial, sans-serif; max-width: 600px;">
               <h2 style="color: #072D48;">Booking Cancelled</h2>
               <p>Hi ${booking.name}, your booking for <strong>${tourLabel}</strong> on <strong>${booking.tour_date}</strong> has been cancelled.</p>
-              <p>If you'd like to rebook, visit <a href="https://aquatrekhikkaduwa.com/booking">aquatrekhikkaduwa.com/booking</a> or WhatsApp us at <strong>+94 77 336 6171</strong>.</p>
+              <p>If you'd like to rebook, visit <a href="https://aquatrekhikkaduwa.com/booking">aquatrekhikkaduwa.com/booking</a> or WhatsApp us at <strong>+94 72 130 1524</strong>.</p>
             </div>`,
         })
       } catch (err) { console.error('Cancellation email error:', err) }
