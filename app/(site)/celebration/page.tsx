@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import CelebrationPackageClient from '@/components/CelebrationPackageClient'
 
 export const metadata: Metadata = {
-  title: 'Celebration Packages - Waterside Events',
+  title: 'Celebrate by the Water — Events at Rathgama Lake | AquaTrek',
   description:
-    'Make your special occasions truly memorable with our customized celebration packages at Rathgama Lake. Birthdays, anniversaries, and group events in a beautiful lakeside setting.',
+    'Birthdays, anniversaries, proposals, and group events on Rathgama Lake, Hikkaduwa. Personalised lakeside celebration packages for up to 20 people. Book via WhatsApp.',
   alternates: { canonical: 'https://aquatrekhikkaduwa.com/celebration' },
   openGraph: {
-    title: 'Celebration Packages | AquaTrek Hikkaduwa',
-    description: 'Celebrate by the water with AquaTrek\'s special event packages at Rathgama Lake.',
+    title: 'Celebrate by the Water | AquaTrek Hikkaduwa',
+    description: 'Personalised lakeside celebration packages — birthdays, anniversaries, and group events on Rathgama Lake.',
     url: 'https://aquatrekhikkaduwa.com/celebration',
+    images: [{ url: '/og-images/homepage.jpg', width: 1200, height: 630, alt: 'Lakeside celebration event at AquaTrek, Rathgama Lake' }],
   },
 }
 
