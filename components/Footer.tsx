@@ -1,5 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackEvent } from '@/lib/analytics'
+import EmailCapture from '@/components/EmailCapture'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -47,6 +51,25 @@ export default function Footer() {
       />
 
       <div className="container py-16">
+
+        {/* Newsletter row */}
+        <div
+          className="mb-12 p-6 rounded-card"
+          style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)' }}
+        >
+          <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+            <div className="flex-1 min-w-0">
+              <p className="font-semibold text-white text-sm mb-1">Get our free Wildlife Spotting Guide</p>
+              <p className="text-xs" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                Kingfishers, monitor lizards &amp; more — delivered to your inbox before your tour.
+              </p>
+            </div>
+            <div className="flex-1 min-w-0">
+              <EmailCapture source="footer" compact />
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* Column 1 — Brand */}
@@ -167,6 +190,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+94773366171"
+                  onClick={() => trackEvent({ name: 'phone_click', params: { source: 'footer' } })}
                   className="flex items-center gap-2 text-sm hover:text-white transition-colors"
                   style={{ color: 'var(--text-inverse-muted)' }}
                 >
@@ -179,6 +203,7 @@ export default function Footer() {
               href="https://wa.me/94721301524"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent({ name: 'whatsapp_click', params: { source: 'footer' } })}
               className="inline-flex items-center justify-center gap-2 w-full px-4 py-2.5 rounded-pill text-white text-sm font-semibold transition-opacity hover:opacity-90"
               style={{ background: '#25D366' }}
             >

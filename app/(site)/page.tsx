@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { JsonLd } from '@/components/JsonLd'
 import InstagramFeed from '@/components/InstagramFeed'
+import EmailCapture from '@/components/EmailCapture'
 
 export const metadata: Metadata = {
   title: 'AquaTrek — Kayaking Tours on Rathgama Lake, Hikkaduwa',
@@ -427,7 +428,7 @@ export default async function HomePage() {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="mb-3">
-                    <Badge variant="coming-soon">Opening 2025</Badge>
+                    <Badge variant="coming-soon">Opening Early 2027</Badge>
                   </div>
                   <h3 className="font-display mb-2" style={{ fontSize: 'var(--text-2xl)' }}>{item.title}</h3>
                   <p className="text-sm flex-1 mb-4" style={{ color: 'var(--text-secondary)' }}>{item.description}</p>
@@ -525,6 +526,31 @@ export default async function HomePage() {
         </div>
       </section>
       */}
+
+      {/* 10. Wildlife Guide Lead Magnet */}
+      <section className="section-sm" style={{ background: 'var(--brand-primary)' }}>
+        <div className="container">
+          <div className="max-w-xl mx-auto text-center reveal">
+            <p className="eyebrow mb-3" style={{ color: 'var(--brand-primary-muted)' }}>Free Download</p>
+            <h2
+              className="mb-3"
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-3xl)',
+                color: 'white',
+                letterSpacing: 'var(--tracking-tight)',
+              }}
+            >
+              Wildlife Spotting Guide for Rathgama Lake
+            </h2>
+            <p className="text-sm mb-8" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '44ch', margin: '0 auto 2rem' }}>
+              Kingfishers, herons, monitor lizards, and more — know exactly what to look for
+              before you get on the water. Free guide, straight to your inbox.
+            </p>
+            <EmailCapture source="homepage_banner" />
+          </div>
+        </div>
+      </section>
 
       {/* 11. Final CTA */}
       <section className="relative overflow-hidden" style={{ minHeight: '400px' }}>

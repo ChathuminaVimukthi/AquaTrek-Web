@@ -1,0 +1,203 @@
+# ----------------------------------------
+# Generate leads overview
+# Account: Default Account for Firebase
+# Property: Aquatrek
+# ----------------------------------------
+#  
+# Start date: 20260414
+# End date: 20260511
+Nth day,New users
+0000,2
+0001,2
+0002,0
+0003,0
+0004,2
+0005,1
+0006,4
+0007,2
+0008,5
+0009,2
+0010,2
+0011,1
+0012,2
+0013,4
+0014,2
+0015,1
+0016,5
+0017,4
+0018,3
+0019,1
+0020,3
+0021,0
+0022,1
+0023,0
+0024,2
+0025,3
+0026,2
+0027,0
+
+# Start date: 20260414
+# End date: 20260511
+Nth day,Returning users
+0000,0
+0001,0
+0002,1
+0003,0
+0004,1
+0005,1
+0006,1
+0007,1
+0008,2
+0009,1
+0010,2
+0011,1
+0012,5
+0013,5
+0014,1
+0015,0
+0016,2
+0017,2
+0018,4
+0019,0
+0020,2
+0021,0
+0022,0
+0023,0
+0024,0
+0025,1
+0026,0
+0027,1
+
+# Start date: 20260414
+# End date: 20260511
+Nth day,Qualified leads
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+
+# Start date: 20260414
+# End date: 20260511
+Nth day,Converted leads
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+
+#  
+# Start date: 20260414
+# End date: 20260511
+Platform,Key events
+
+
+#  
+# Start date: 20260414
+# End date: 20260511
+First user primary channel group (Default Channel Group),New users
+Direct,29
+Organic Search,18
+Organic Social,9
+
+# How well do you retain your users?
+# Start date: 20260329
+# End date: 20260509
+Date,Week 0,Week 1,Week 2,Week 3,Week 4,Week 5
+Mar 29 - Apr 4,8,0,0
+Apr 5 - Apr 11,21,0,0
+Apr 12 - Apr 18,13,0,0
+Apr 19 - Apr 25,17,1,1
+Apr 26 - May 2,21,0,-1
+May 3 - May 9,9,-1,-1
+
+#  
+# Start date: 20260414
+# End date: 20260511
+Audience name,Active users
+All Users,61
+
+#  
+# Start date: 20260414
+# End date: 20260511
+City,Active users
+Colombo,32
+Bengaluru,4
+Sri Jayawardenepura Kotte,4
+Chennai,2
+Hikkaduwa,2
+Osaka,2
+Aspen,1
+Boardman,1
+Council Bluffs,1
+Dar es Salaam,1
+Galle,1
+Glasgow,1
+Hyderabad,1
+London,1
+Moratuwa,1
+Negombo,1
+Plainsboro Township,1
+Prague,1
+Singapore,1
+
+#  
+# Start date: 20260414
+# End date: 20260511
+Session manual source,Sessions
+google,41
+l.wl.co,10
+ig,9
+bing,1
+vercel.com,1
+
+#  
+# Start date: 20260414
+# End date: 20260511
+Nth day

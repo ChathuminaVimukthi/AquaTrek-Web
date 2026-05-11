@@ -77,7 +77,7 @@ const tips = [
     items: [
       { label: 'Sunrise Tour (6:00 AM)', detail: 'Peak wildlife activity, cool air, golden light — our top recommendation' },
       { label: 'Morning Tour (8:00 AM)', detail: 'Great for families; still active wildlife before the heat builds' },
-      { label: 'Sunset Tour (5:00 PM)', detail: 'Brahminy Kites, fruit bats, and dramatic skies over the lake' },
+      { label: 'Sunset Tour (3:30 PM)', detail: 'Brahminy Kites, fruit bats, and dramatic skies over the lake' },
       { label: 'November – February', detail: 'Dry season peak: migratory birds + best photography light' },
       { label: 'May – August', detail: 'Lush green season, fewer tourists, kingfishers breeding' },
       { label: 'Weekdays over weekends', detail: 'Quieter lake, more personal experience with guides' },
