@@ -10,13 +10,13 @@ import WaitlistForm from '@/components/WaitlistForm'
 import { JsonLd } from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'AquaTrek Lake House — Lakefront Hostel Hikkaduwa | Opening 2025',
+  title: 'AquaTrek Lake House — Lakefront Hostel Hikkaduwa | Opening Early 2027',
   description:
     "Sri Lanka's only lakefront hostel on Rathgama Lake. Dorm beds, private rooms, Starlink WiFi, kayak tours from your doorstep. Perfect for backpackers, digital nomads & couples.",
   alternates: { canonical: 'https://aquatrekhikkaduwa.com/hostel' },
   openGraph: {
     title: 'AquaTrek Lake House — Lakefront Hostel Hikkaduwa',
-    description: "Sri Lanka's only lakefront hostel on Rathgama Lake. Opening 2025.",
+    description: "Sri Lanka's only lakefront hostel on Rathgama Lake. Opening Early 2027.",
     url: 'https://aquatrekhikkaduwa.com/hostel',
     images: [{ url: '/og-images/hostel.jpg', width: 1200, height: 630, alt: 'AquaTrek Lake House lakefront hostel on Rathgama Lake, Hikkaduwa' }],
   },
@@ -88,7 +88,7 @@ export default function HostelPage() {
       >
         <div className="h-full flex items-end pb-16 container">
           <div className="max-w-xl">
-            <Badge variant="coming-soon" className="mb-4">Opening 2025</Badge>
+            <Badge variant="coming-soon" className="mb-4">Opening Early 2027</Badge>
             <h1
               className="text-white mb-4"
               style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-5xl)', letterSpacing: 'var(--tracking-tight)' }}

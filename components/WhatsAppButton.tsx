@@ -1,11 +1,14 @@
 'use client'
 
+import { trackEvent } from '@/lib/analytics'
+
 export default function WhatsAppButton() {
   return (
     <a
       href="https://wa.me/message/NJJEXSOX3ABGM1"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackEvent({ name: 'whatsapp_click', params: { source: 'floating' } })}
       className="fixed bottom-8 right-8 z-50 bg-secondary hover:bg-secondary-hover text-white p-4 shadow-lg transition-all duration-300 hover:scale-110 rounded-full"
       aria-label="Contact us on WhatsApp"
     >

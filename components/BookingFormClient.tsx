@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
+import { trackEvent } from '@/lib/analytics'
 
 // ── Tour data ──────────────────────────────────────────────────────────────
 const TOURS = [
@@ -21,7 +22,7 @@ const TOURS = [
     id: 'sunset-banyan-tree',
     name: 'Sunset Banyan Tree Tour',
     duration: '2.5 hrs',
-    time: '5:00 PM',
+    time: '3:30 PM',
     fixedTime: true,
     price: 3000,
     image: '/images/sunset-tour/sunset-1.webp',
@@ -125,6 +126,7 @@ export default function BookingFormClient() {
     phone: '',
     requests: '',
   })
+  const formStarted = useRef(false)
 
   useEffect(() => {
     const t = searchParams.get('tour')
@@ -134,6 +136,10 @@ export default function BookingFormClient() {
   }, [searchParams])
 
   const set = useCallback((key: keyof State, value: string | number) => {
+    if (!formStarted.current) {
+      formStarted.current = true
+      trackEvent({ name: 'booking_form_start', params: {} })
+    }
     setState((p) => ({ ...p, [key]: value }))
   }, [])
 
@@ -373,7 +379,11 @@ export default function BookingFormClient() {
             href={canBook ? waUrl : undefined}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={!canBook ? (e) => e.preventDefault() : undefined}
+            onClick={
+              !canBook
+                ? (e) => e.preventDefault()
+                : () => trackEvent({ name: 'booking_submitted', params: { tour: state.tourId } })
+            }
             className="flex items-center justify-center gap-3 w-full py-4 rounded-pill text-base font-semibold transition-all hover:-translate-y-px hover:shadow-lg"
             style={{
               background: canBook ? '#25D366' : 'var(--neutral-300)',

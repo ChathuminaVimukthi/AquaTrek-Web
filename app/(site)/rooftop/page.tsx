@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://aquatrekhikkaduwa.com/rooftop' },
   openGraph: {
     title: 'Rooftop Sunset Deck — Events & Private Dining Hikkaduwa',
-    description: 'Open-air rooftop with lake views. Sunset yoga, private dinners, events. Opening 2025.',
+    description: 'Open-air rooftop with lake views. Sunset yoga, private dinners, events. Opening Early 2027.',
     url: 'https://aquatrekhikkaduwa.com/rooftop',
     images: [{ url: '/og-images/rooftop.jpg', width: 1200, height: 630, alt: 'AquaTrek rooftop sunset deck with views over Rathgama Lake, Hikkaduwa' }],
   },
@@ -69,7 +69,7 @@ export default function RooftopPage() {
       >
         <div className="h-full flex items-end pb-16 container">
           <div className="max-w-xl">
-            <Badge variant="coming-soon" className="mb-4">Opening 2025</Badge>
+            <Badge variant="coming-soon" className="mb-4">Opening Early 2027</Badge>
             <h1
               className="text-white mb-4"
               style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-5xl)', letterSpacing: 'var(--tracking-tight)' }}

@@ -42,7 +42,7 @@ const guardrails = [
 
 const coming = [
   {
-    badge: 'Opening 2025',
+    badge: 'Opening Early 2027',
     icon: '🏡',
     title: 'AquaTrek Lake House',
     desc: "Sri Lanka's only lakefront hostel on Rathgama Lake. Dorm beds, private rooms, Starlink WiFi, and kayak tours from your doorstep.",
@@ -50,7 +50,7 @@ const coming = [
     cta: 'Learn more →',
   },
   {
-    badge: 'Opening 2025',
+    badge: 'Opening Early 2027',
     icon: '💻',
     title: 'AquaHub Cowork',
     desc: 'Starlink-powered coworking café right on the lake. The most productive — and most peaceful — office in Hikkaduwa.',
@@ -58,7 +58,7 @@ const coming = [
     cta: 'Learn more →',
   },
   {
-    badge: 'Opening 2025',
+    badge: 'Opening Early 2027',
     icon: '🌅',
     title: 'Rooftop Sunset Deck',
     desc: '360° views over Rathgama Lake. Sunset yoga, private dinners, birthday events, and corporate retreats up to 50 guests.',
@@ -74,7 +74,7 @@ const roadmap = [
     items: ['Sunrise Wildlife Tour', 'Sunset Banyan Tree Tour', 'Private & group bookings', 'Celebration packages'],
   },
   {
-    period: '2025',
+    period: 'Early 2027',
     label: 'Lagoon Oasis Phase 1',
     items: ['Lake House Hostel', 'AquaHub Coworking Café', 'Rooftop Sunset Deck', 'Expanded tour schedule'],
   },
@@ -172,7 +172,7 @@ export default function VisionPage() {
               Three spaces. One lagoon.
             </h2>
             <p className="mt-4 mx-auto" style={{ color: 'var(--text-secondary)', maxWidth: '50ch' }}>
-              Each opening in 2025, each designed around the same principle: respect the lake first.
+              Each opening in early 2027, each designed around the same principle: respect the lake first.
             </p>
           </div>
 

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { trackEvent } from '@/lib/analytics'
 import { Bars3Icon, XMarkIcon, PhoneIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
 
 const tourLinks = [
@@ -284,6 +285,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
             <a
               href="tel:+94773366171"
+              onClick={() => trackEvent({ name: 'phone_click', params: { source: 'navbar' } })}
               className="flex items-center gap-1.5 text-sm font-medium text-[var(--nav-link-color)] hover:text-[var(--brand-primary)] transition-colors"
             >
               <PhoneIcon className="w-4 h-4" />
@@ -431,7 +433,7 @@ export default function Navbar() {
             <a
               href="tel:+94773366171"
               className="flex items-center gap-2 text-white font-semibold text-sm"
-              onClick={closeAll}
+              onClick={() => { closeAll(); trackEvent({ name: 'phone_click', params: { source: 'navbar_mobile' } }) }}
             >
               <PhoneIcon className="w-4 h-4" />
               +94 77 336 6171
